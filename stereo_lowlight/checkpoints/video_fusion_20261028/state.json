@@ -1,0 +1,16 @@
+{
+  "created": "2026-10-28T23:05:17.467523",
+  "variant": "video_fusion",
+  "programmed": true,
+  "flash_written": false,
+  "vio_control": 219,
+  "default_mode": 1,
+  "test_count": 21,
+  "wns_ns": 0.994,
+  "whs_ns": 0.052,
+  "luts": 18214,
+  "bram_tiles": 46,
+  "new_modes_visually_verified": false,
+  "physical_accuracy_verified": false,
+  "archive": "baseline\\video_fusion_checked_20261028"
+}

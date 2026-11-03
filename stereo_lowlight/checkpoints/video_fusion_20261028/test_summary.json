@@ -1,0 +1,132 @@
+{
+  "created": "2026-10-28T22:55:27.652078",
+  "all_passed": true,
+  "tests": [
+    {
+      "name": "tb_video_tools",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS display-side binary alignment, edges/seam isolation, 4 full-frame motion initialization/move/stop and left/right separation"
+    },
+    {
+      "name": "tb_template32",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS 32x32 template capture, translated and last-grid target, ambiguity/absence/flat rejection, mode-exit reset and recapture"
+    },
+    {
+      "name": "tb_observer",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS luminance tap 6000 pixels, phase tags, and 5888 full-resolution single-frame ROI pixels frozen/rearmed"
+    },
+    {
+      "name": "tb_row_align",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS row compensation: 360000 pixels, bypass/0/1/24/31 rows, either eye, ring wrap, borders, DE bubbles"
+    },
+    {
+      "name": "tb_alignment_scene",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS 24-row misaligned RGB scene after compensation, disparities 4/12/22, accepted=127464/127464 correct=127464 center=92cm"
+    },
+    {
+      "name": "tb_sensor_brightness",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS sensor: 251 init operations, reset delay, auto exposure target, repeated register readback"
+    },
+    {
+      "name": "tb_lowlight",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS lowlight bypass alignment, dark lift and highlight saturation"
+    },
+    {
+      "name": "tb_lowlight_reference",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS 73728 independent enhanced RGB565 vectors, all colors, varied weights/history and blanking"
+    },
+    {
+      "name": "tb_algorithms",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS Census direction=0 independent cost/uniqueness reference, disparity 7: 456/456"
+    },
+    {
+      "name": "tb_reverse",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS Census direction=1 independent cost/uniqueness reference, disparity 7: 456/456"
+    },
+    {
+      "name": "tb_features",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS feature coordinates, blanking bubbles and binocular boundary isolation"
+    },
+    {
+      "name": "tb_stereo_scene",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS 400x480 RGB stereo scene, disparities 4/12/22, accepted=134232/134232 correct=134232 center=92cm"
+    },
+    {
+      "name": "tb_stereo_degraded",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS observed blurry text + gain/bias/noise, disparities 4/12/22, accepted=49134/134232 correct=48797 center=92cm"
+    },
+    {
+      "name": "tb_frames",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS histogram normalization, ROI distance arithmetic, depth bank swap and invalid clearing"
+    },
+    {
+      "name": "tb_depth_map",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS whole 800x480 disparity display, two banks, every one of 768000 output cells, invalid overwrite and field boundaries"
+    },
+    {
+      "name": "tb_roi_accuracy",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS ROI arithmetic 0.5/0.75/1/1.5/2/3m, <=1cm numerical error; diagnostic counts, mixed/empty/near/far/sparse rejection"
+    },
+    {
+      "name": "tb_fifo_pack",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS FIFO partial-frame discard and 32-pixel packing"
+    },
+    {
+      "name": "tb_frame_cdc",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS asynchronous frame pulse synchronization and single-event generation"
+    },
+    {
+      "name": "tb_pipeline",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS integrated full-width video pipeline, every bypass RGB pixel/DE/coordinate aligned"
+    },
+    {
+      "name": "tb_lcd_system",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS complete LCD request + modeled FIFO latency + 3 full frames, raw RGB alignment, enhancement lift, color bars and frame metrics"
+    },
+    {
+      "name": "tb_video_pipeline",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS all four new modes through complete fusion latency, exact RGB/DE and coordinates"
+    }
+  ]
+}

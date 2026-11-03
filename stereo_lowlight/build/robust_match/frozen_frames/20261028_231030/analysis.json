@@ -1,0 +1,322 @@
+{
+  "complete": true,
+  "pixels": 5888,
+  "both_reads_identical": true,
+  "patches": [
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "standard_deviation": 35.129,
+      "distinct_peak_gap": 0.344229,
+      "best": [
+        {
+          "ncc": 0.925737,
+          "left_minus_right": [
+            -10,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.880796,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.825496,
+          "left_minus_right": [
+            -10,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.743849,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.736525,
+          "left_minus_right": [
+            -10,
+            -29
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 35.541,
+      "distinct_peak_gap": 0.272151,
+      "best": [
+        {
+          "ncc": 0.911479,
+          "left_minus_right": [
+            -10,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.875731,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.827674,
+          "left_minus_right": [
+            -10,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.805109,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.792533,
+          "left_minus_right": [
+            -9,
+            -28
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        200,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 34.221,
+      "distinct_peak_gap": 0.39343,
+      "best": [
+        {
+          "ncc": 0.940327,
+          "left_minus_right": [
+            -10,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.882894,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.821773,
+          "left_minus_right": [
+            -10,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.715104,
+          "left_minus_right": [
+            -10,
+            -29
+          ]
+        },
+        {
+          "ncc": 0.670895,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        216,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 24.872,
+      "distinct_peak_gap": 0.141775,
+      "best": [
+        {
+          "ncc": 0.969846,
+          "left_minus_right": [
+            -10,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.946654,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.937798,
+          "left_minus_right": [
+            -10,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.880624,
+          "left_minus_right": [
+            -10,
+            -29
+          ]
+        },
+        {
+          "ncc": 0.86935,
+          "left_minus_right": [
+            -10,
+            -25
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        192,
+        236
+      ],
+      "size": [
+        24,
+        12
+      ],
+      "standard_deviation": 36.616,
+      "distinct_peak_gap": 0.404873,
+      "best": [
+        {
+          "ncc": 0.918076,
+          "left_minus_right": [
+            -10,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.882607,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.791178,
+          "left_minus_right": [
+            -10,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.709942,
+          "left_minus_right": [
+            -10,
+            -29
+          ]
+        },
+        {
+          "ncc": 0.661772,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        }
+      ]
+    }
+  ],
+  "warning": "One LCD frame, from independently timed camera frame buffers; local ROI translation only, not full rectification or metric calibration.",
+  "offline_census_textured_pixels": 380,
+  "offline_census_max_population": 98,
+  "offline_census_best": [
+    {
+      "dy": -28,
+      "horizontal_sign": -1,
+      "population": 61,
+      "peak": 10,
+      "cluster": 34,
+      "cluster_fraction": 0.5574
+    },
+    {
+      "dy": -27,
+      "horizontal_sign": -1,
+      "population": 94,
+      "peak": 10,
+      "cluster": 45,
+      "cluster_fraction": 0.4787
+    },
+    {
+      "dy": -26,
+      "horizontal_sign": -1,
+      "population": 71,
+      "peak": 10,
+      "cluster": 24,
+      "cluster_fraction": 0.338
+    },
+    {
+      "dy": -29,
+      "horizontal_sign": -1,
+      "population": 80,
+      "peak": 10,
+      "cluster": 27,
+      "cluster_fraction": 0.3375
+    },
+    {
+      "dy": -34,
+      "horizontal_sign": -1,
+      "population": 83,
+      "peak": 10,
+      "cluster": 21,
+      "cluster_fraction": 0.253
+    },
+    {
+      "dy": -25,
+      "horizontal_sign": -1,
+      "population": 86,
+      "peak": 10,
+      "cluster": 20,
+      "cluster_fraction": 0.2326
+    },
+    {
+      "dy": -29,
+      "horizontal_sign": 1,
+      "population": 84,
+      "peak": 13,
+      "cluster": 18,
+      "cluster_fraction": 0.2143
+    },
+    {
+      "dy": -23,
+      "horizontal_sign": 1,
+      "population": 80,
+      "peak": 12,
+      "cluster": 17,
+      "cluster_fraction": 0.2125
+    }
+  ],
+  "offline_census_warning": "512-pixel subregion and limited search window; diagnostic only, not hardware ROI acceptance or metric accuracy."
+}

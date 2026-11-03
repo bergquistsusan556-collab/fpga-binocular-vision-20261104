@@ -1,0 +1,2 @@
+LCD raster snapshot; independent sensor exposures; static board required
+Native 400x480 single-eye frames; luminance quantized to 6 bits. Left, right, then left-check exposures are sequential; keep board fixed.

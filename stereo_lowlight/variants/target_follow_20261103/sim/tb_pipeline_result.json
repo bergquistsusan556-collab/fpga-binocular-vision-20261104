@@ -1,0 +1,21 @@
+{
+  "test": "tb_pipeline",
+  "passed": true,
+  "created": "2026-11-03T19:02:42.923991+08:00",
+  "source_sha256": {
+    "variants\\target_follow_20261103\\rtl\\marker7_tracker.v": "eb6329ded52fd6a6016859bc88e3a891d47f4c310c5ce6863d1fb84546ed21bb",
+    "variants\\target_follow_20261103\\rtl\\follow_row_tuner.v": "37875e5f7194cede61725c1a62cf7145d5ba7cee1d42adb1730b748fe98a0610",
+    "variants\\target_follow_20261103\\rtl\\video_tools.v": "86b84fa710413d45b57e6e3ed529cad8bb46dafb77c85d742e316e5141f0ba5d",
+    "rtl\\stream_features.v": "223707e44f4b4002bd3850735f29b309cf4da33eac5574a9903f279c044300d6",
+    "rtl\\luma_histogram.v": "b4c6fdba96396894c49c7e14a4f9ecc5a9cf9526330c49de7fa77e1a8b97eece",
+    "rtl\\lowlight_fixed.v": "252559830824ce664f35c8f411e769dcf7e4c19622ed023f040c1d5978432b51",
+    "rtl\\stereo_row_align.v": "ec065ef58e6c14e16c03181a4a8ea9334381f76a7038e4a3311c1b0acc6cee5e",
+    "variants\\target_follow_20261103\\rtl\\stereo_census.v": "4c50f1bd73ec91f4da5371bfd95f1eaf1f2f90623a8c2a4590f0a37c1a3c6f3e",
+    "rtl\\depth_frame.v": "bc89b6290ccebc07c297ffc9355a441a8b124935f7651cdbd837ca7c0812d3a2",
+    "variants\\target_follow_20261103\\rtl\\depth_roi_follow.v": "a98127904c66d7dcdca835164ffe23bfe7b05ee93edbca8c461c3a181574103a",
+    "rtl\\distance_osd.v": "cddf02a1c2d3a92698186a4f87cfe68a17cae057b3096cabef7302c302efb7c6",
+    "rtl\\video_diagnostics.v": "36a227214659aeecd12d01fa1fb7e057294c0c996e1a9341484475e8216d3249",
+    "variants\\target_follow_20261103\\rtl\\fusion_pipeline.v": "44854c3605b16b7d5b7909d9369e3ca1e11c112b1402005b7ed16ce80419e668",
+    "sim\\tb_pipeline.v": "3d4232dd7ee2a6878f9e066575fc06e8607d7ba2b341c044172ee0732b59f527"
+  }
+}

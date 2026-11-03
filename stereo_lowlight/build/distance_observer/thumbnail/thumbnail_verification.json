@@ -1,0 +1,9 @@
+{
+  "pixels": 6000,
+  "width": 100,
+  "height": 60,
+  "sample_step_xy": 8,
+  "changed_duplicate_pixels": 118,
+  "bad_address_order": 0,
+  "note": "Live sampled thumbnail across captures, not a synchronized stereo exposure."
+}

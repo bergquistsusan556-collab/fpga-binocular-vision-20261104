@@ -1,0 +1,86 @@
+{
+  "samples": [
+    {
+      "file": "capture_0.csv",
+      "sha256": "f187ea260aca2f5e5f7574e31c6cbd5bf2ceb59d969a744fb5e1d21cad7141c5",
+      "hardware_identity_ok": true,
+      "frame1": 72,
+      "frame2": 71,
+      "target_valid": false,
+      "box_right_analysis": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "tracking_epoch": 21,
+      "following_mode": true,
+      "rotation_quarters": 0,
+      "raw_distance_cm": 0,
+      "distance_valid": false,
+      "dominant_disparity": 0,
+      "roi_reason": 1,
+      "roi_population": 0,
+      "roi_cluster": 0,
+      "roi_peak": 0,
+      "mean_disparity_px": null
+    },
+    {
+      "file": "capture_1.csv",
+      "sha256": "7dffd49b2f3a6684650c9f595fa86b64e6684be8cf0a6034394e5de6573c0f61",
+      "hardware_identity_ok": true,
+      "frame1": 94,
+      "frame2": 93,
+      "target_valid": false,
+      "box_right_analysis": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "tracking_epoch": 40,
+      "following_mode": true,
+      "rotation_quarters": 0,
+      "raw_distance_cm": 0,
+      "distance_valid": false,
+      "dominant_disparity": 0,
+      "roi_reason": 1,
+      "roi_population": 0,
+      "roi_cluster": 0,
+      "roi_peak": 0,
+      "mean_disparity_px": null
+    },
+    {
+      "file": "capture_2.csv",
+      "sha256": "1476e6af5c427026ed266832825592bf26f4d68b0efd82ca7b1fc978821e6c44",
+      "hardware_identity_ok": true,
+      "frame1": 115,
+      "frame2": 114,
+      "target_valid": false,
+      "box_right_analysis": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "tracking_epoch": 58,
+      "following_mode": true,
+      "rotation_quarters": 0,
+      "raw_distance_cm": 0,
+      "distance_valid": false,
+      "dominant_disparity": 0,
+      "roi_reason": 1,
+      "roi_population": 0,
+      "roi_cluster": 0,
+      "roi_peak": 0,
+      "mean_disparity_px": null
+    }
+  ],
+  "hardware_checks_passed": true,
+  "cameras_advancing": true,
+  "tracking_updates_advancing": true,
+  "target_found_count": 0,
+  "target_distance_valid_count": 0,
+  "dynamic_following_verified": false,
+  "distance_accuracy_verified_by_this_capture": false
+}

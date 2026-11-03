@@ -1,0 +1,1062 @@
+{
+  "original_control_restored_by_capture_script": true,
+  "scope": "Temporary row diagnostic, same unknown fixed target distance; no new range fit or acceptance.",
+  "rows": [
+    {
+      "row": 24,
+      "target_found": 2,
+      "internal_valid": 0,
+      "display_valid": 0,
+      "raw_cm": [
+        0,
+        0,
+        0
+      ],
+      "reasons": [
+        1,
+        1,
+        1
+      ],
+      "boxes": [
+        [
+          118,
+          103,
+          35,
+          90
+        ],
+        [
+          118,
+          103,
+          36,
+          90
+        ],
+        [
+          118,
+          104,
+          39,
+          90
+        ]
+      ],
+      "peaks": [
+        0,
+        0,
+        0
+      ],
+      "cluster_fraction": [
+        0,
+        0,
+        0
+      ],
+      "samples": [
+        {
+          "file": "capture_0.csv",
+          "sha256": "0dd135fbc8096fbba4e559c74b704984fa8527241a5314936dad6ab3e15ae37b",
+          "hardware_identity_ok": true,
+          "frame1": 185,
+          "frame2": 184,
+          "target_valid": true,
+          "box_right_analysis": [
+            118,
+            103,
+            35,
+            90
+          ],
+          "tracking_epoch": 75,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": true,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_1.csv",
+          "sha256": "cddb1d8021871d99745b0504ed5c7d3c6abf2b4c5ef0037a8029d9fd58b2f962",
+          "hardware_identity_ok": true,
+          "frame1": 199,
+          "frame2": 198,
+          "target_valid": false,
+          "box_right_analysis": [
+            118,
+            103,
+            36,
+            90
+          ],
+          "tracking_epoch": 87,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_2.csv",
+          "sha256": "aacee88e52529ad724abc77b22a45c1201ef16d31c718871deb2bf5fd1fe9ec1",
+          "hardware_identity_ok": true,
+          "frame1": 213,
+          "frame2": 212,
+          "target_valid": true,
+          "box_right_analysis": [
+            118,
+            104,
+            39,
+            90
+          ],
+          "tracking_epoch": 99,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": true,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "target_found": 1,
+      "internal_valid": 0,
+      "display_valid": 0,
+      "raw_cm": [
+        0,
+        0,
+        0
+      ],
+      "reasons": [
+        2,
+        1,
+        1
+      ],
+      "boxes": [
+        [
+          118,
+          104,
+          38,
+          90
+        ],
+        [
+          118,
+          104,
+          39,
+          90
+        ],
+        [
+          118,
+          104,
+          38,
+          90
+        ]
+      ],
+      "peaks": [
+        14,
+        0,
+        0
+      ],
+      "cluster_fraction": [
+        0.099,
+        0,
+        0
+      ],
+      "samples": [
+        {
+          "file": "capture_0.csv",
+          "sha256": "6050b8066e228db44955b996e73b8836b2868c3c227b12c78275c5427df646ef",
+          "hardware_identity_ok": true,
+          "frame1": 236,
+          "frame2": 235,
+          "target_valid": true,
+          "box_right_analysis": [
+            118,
+            104,
+            38,
+            90
+          ],
+          "tracking_epoch": 118,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": true,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 11,
+          "roi_reason": 2,
+          "roi_population": 141,
+          "roi_cluster": 14,
+          "roi_peak": 14,
+          "mean_disparity_px": 11.0
+        },
+        {
+          "file": "capture_1.csv",
+          "sha256": "ac3fe17f60203c948b29156f71329faf64fc07a7e8c8e09ecd9f56c0ad352812",
+          "hardware_identity_ok": true,
+          "frame1": 251,
+          "frame2": 250,
+          "target_valid": false,
+          "box_right_analysis": [
+            118,
+            104,
+            39,
+            90
+          ],
+          "tracking_epoch": 130,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_2.csv",
+          "sha256": "2394f2472d30df8ebbe6a248005005da1b256c0cfb96e99b8ad1269d3c0934a1",
+          "hardware_identity_ok": true,
+          "frame1": 10,
+          "frame2": 9,
+          "target_valid": false,
+          "box_right_analysis": [
+            118,
+            104,
+            38,
+            90
+          ],
+          "tracking_epoch": 143,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "target_found": 1,
+      "internal_valid": 0,
+      "display_valid": 0,
+      "raw_cm": [
+        0,
+        0,
+        0
+      ],
+      "reasons": [
+        3,
+        1,
+        1
+      ],
+      "boxes": [
+        [
+          117,
+          104,
+          40,
+          90
+        ],
+        [
+          118,
+          104,
+          35,
+          90
+        ],
+        [
+          118,
+          104,
+          35,
+          90
+        ]
+      ],
+      "peaks": [
+        31,
+        0,
+        0
+      ],
+      "cluster_fraction": [
+        0.174,
+        0,
+        0
+      ],
+      "samples": [
+        {
+          "file": "capture_0.csv",
+          "sha256": "737aa806a9ff7f338fbf2ff26d0725f121695761393475b61b2d7388a7bae979",
+          "hardware_identity_ok": true,
+          "frame1": 34,
+          "frame2": 33,
+          "target_valid": true,
+          "box_right_analysis": [
+            117,
+            104,
+            40,
+            90
+          ],
+          "tracking_epoch": 164,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": true,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 11,
+          "roi_reason": 3,
+          "roi_population": 230,
+          "roi_cluster": 40,
+          "roi_peak": 31,
+          "mean_disparity_px": 10.875
+        },
+        {
+          "file": "capture_1.csv",
+          "sha256": "3d181230d1a3b816788f1f8ffc7584e5cc701079fb9a5ec56a31d5a5fbabdcf3",
+          "hardware_identity_ok": true,
+          "frame1": 49,
+          "frame2": 48,
+          "target_valid": false,
+          "box_right_analysis": [
+            118,
+            104,
+            35,
+            90
+          ],
+          "tracking_epoch": 176,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_2.csv",
+          "sha256": "fbcacce8a7d3f2f055fc13a88a016e06e4bb670cdf0cc34ad42c9119abacf293",
+          "hardware_identity_ok": true,
+          "frame1": 64,
+          "frame2": 63,
+          "target_valid": false,
+          "box_right_analysis": [
+            118,
+            104,
+            35,
+            90
+          ],
+          "tracking_epoch": 189,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "target_found": 1,
+      "internal_valid": 0,
+      "display_valid": 0,
+      "raw_cm": [
+        0,
+        0,
+        0
+      ],
+      "reasons": [
+        1,
+        1,
+        2
+      ],
+      "boxes": [
+        [
+          117,
+          104,
+          40,
+          90
+        ],
+        [
+          117,
+          104,
+          40,
+          90
+        ],
+        [
+          117,
+          104,
+          36,
+          90
+        ]
+      ],
+      "peaks": [
+        0,
+        0,
+        20
+      ],
+      "cluster_fraction": [
+        0,
+        0,
+        0.122
+      ],
+      "samples": [
+        {
+          "file": "capture_0.csv",
+          "sha256": "ea124e5576cd30e24a0114909491db60ef8530b688eca61b11328e0ab7639050",
+          "hardware_identity_ok": true,
+          "frame1": 88,
+          "frame2": 87,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            104,
+            40,
+            90
+          ],
+          "tracking_epoch": 209,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_1.csv",
+          "sha256": "34832d49356105f305b8bb77ca031ebd5033ba1b11c5715ade4c6045a48249a0",
+          "hardware_identity_ok": true,
+          "frame1": 103,
+          "frame2": 102,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            104,
+            40,
+            90
+          ],
+          "tracking_epoch": 222,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_2.csv",
+          "sha256": "63696fdf87ce4a629f90507005828cf6d833da957b3f34f5a1bee0fa067f460c",
+          "hardware_identity_ok": true,
+          "frame1": 118,
+          "frame2": 117,
+          "target_valid": true,
+          "box_right_analysis": [
+            117,
+            104,
+            36,
+            90
+          ],
+          "tracking_epoch": 235,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": true,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 63,
+          "roi_reason": 2,
+          "roi_population": 164,
+          "roi_cluster": 20,
+          "roi_peak": 20,
+          "mean_disparity_px": 63.0
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "target_found": 1,
+      "internal_valid": 1,
+      "display_valid": 1,
+      "raw_cm": [
+        0,
+        118,
+        0
+      ],
+      "reasons": [
+        1,
+        6,
+        1
+      ],
+      "boxes": [
+        [
+          117,
+          104,
+          36,
+          90
+        ],
+        [
+          117,
+          104,
+          38,
+          90
+        ],
+        [
+          117,
+          104,
+          37,
+          90
+        ]
+      ],
+      "peaks": [
+        0,
+        138,
+        0
+      ],
+      "cluster_fraction": [
+        0,
+        0.639,
+        0
+      ],
+      "samples": [
+        {
+          "file": "capture_0.csv",
+          "sha256": "1fd316cc4520cadc50d874d5263a6eb0eae0a52e9ab895a1b96886193956f773",
+          "hardware_identity_ok": true,
+          "frame1": 142,
+          "frame2": 141,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            104,
+            36,
+            90
+          ],
+          "tracking_epoch": 255,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": false,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_1.csv",
+          "sha256": "899595389499d41649d078277c37c87f88c7ff481212a815e34aab7e7a1dbfb3",
+          "hardware_identity_ok": true,
+          "frame1": 157,
+          "frame2": 156,
+          "target_valid": true,
+          "box_right_analysis": [
+            117,
+            104,
+            38,
+            90
+          ],
+          "tracking_epoch": 11,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": true,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": true,
+          "raw_distance_cm": 118,
+          "distance_valid": true,
+          "dominant_disparity": 8,
+          "roi_reason": 6,
+          "roi_population": 238,
+          "roi_cluster": 152,
+          "roi_peak": 138,
+          "mean_disparity_px": 8.092105263157896
+        },
+        {
+          "file": "capture_2.csv",
+          "sha256": "b4209c88a6cdb2ee377b807c6d2b52644deff2d88210aebcca1b338e84170108",
+          "hardware_identity_ok": true,
+          "frame1": 172,
+          "frame2": 171,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            104,
+            37,
+            90
+          ],
+          "tracking_epoch": 24,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "target_found": 0,
+      "internal_valid": 0,
+      "display_valid": 0,
+      "raw_cm": [
+        0,
+        0,
+        0
+      ],
+      "reasons": [
+        1,
+        1,
+        1
+      ],
+      "boxes": [
+        [
+          117,
+          104,
+          36,
+          90
+        ],
+        [
+          117,
+          104,
+          36,
+          90
+        ],
+        [
+          117,
+          105,
+          40,
+          90
+        ]
+      ],
+      "peaks": [
+        0,
+        0,
+        0
+      ],
+      "cluster_fraction": [
+        0,
+        0,
+        0
+      ],
+      "samples": [
+        {
+          "file": "capture_0.csv",
+          "sha256": "9ffd582e309a06ba258624f87d8fb74ca6a252c13b2d9e760530d2d07c7f1675",
+          "hardware_identity_ok": true,
+          "frame1": 195,
+          "frame2": 194,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            104,
+            36,
+            90
+          ],
+          "tracking_epoch": 44,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_1.csv",
+          "sha256": "db2e49122a71fb8bb6222258cfe3bc46c64935166268b0e53ae6715a9a4aea55",
+          "hardware_identity_ok": true,
+          "frame1": 210,
+          "frame2": 209,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            104,
+            36,
+            90
+          ],
+          "tracking_epoch": 57,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_2.csv",
+          "sha256": "77da41ecd03e8b6bcca508e36f9bb4df249d2ec7547080c12e62c3545e65674d",
+          "hardware_identity_ok": true,
+          "frame1": 225,
+          "frame2": 224,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            105,
+            40,
+            90
+          ],
+          "tracking_epoch": 69,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "target_found": 0,
+      "internal_valid": 0,
+      "display_valid": 0,
+      "raw_cm": [
+        0,
+        0,
+        0
+      ],
+      "reasons": [
+        1,
+        1,
+        1
+      ],
+      "boxes": [
+        [
+          117,
+          105,
+          40,
+          90
+        ],
+        [
+          117,
+          104,
+          35,
+          90
+        ],
+        [
+          117,
+          104,
+          35,
+          90
+        ]
+      ],
+      "peaks": [
+        0,
+        0,
+        0
+      ],
+      "cluster_fraction": [
+        0,
+        0,
+        0
+      ],
+      "samples": [
+        {
+          "file": "capture_0.csv",
+          "sha256": "4d8a63df66bd19cf535929d249e0085624b22c26079baa6ff9bf72bf9e75c660",
+          "hardware_identity_ok": true,
+          "frame1": 249,
+          "frame2": 248,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            105,
+            40,
+            90
+          ],
+          "tracking_epoch": 89,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_1.csv",
+          "sha256": "22386d81d70294b4581e78266c5cbf5e736d3fd24ff1ac248f4adfb1853ea123",
+          "hardware_identity_ok": true,
+          "frame1": 8,
+          "frame2": 7,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            104,
+            35,
+            90
+          ],
+          "tracking_epoch": 102,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_2.csv",
+          "sha256": "3be7bd250b58ae55bf6f8957b1a9f8cc24131d88948ead7930ac623a1736845e",
+          "hardware_identity_ok": true,
+          "frame1": 23,
+          "frame2": 22,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            104,
+            35,
+            90
+          ],
+          "tracking_epoch": 115,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "target_found": 2,
+      "internal_valid": 2,
+      "display_valid": 2,
+      "raw_cm": [
+        118,
+        0,
+        118
+      ],
+      "reasons": [
+        6,
+        1,
+        6
+      ],
+      "boxes": [
+        [
+          117,
+          105,
+          38,
+          90
+        ],
+        [
+          117,
+          105,
+          36,
+          90
+        ],
+        [
+          117,
+          105,
+          37,
+          90
+        ]
+      ],
+      "peaks": [
+        256,
+        0,
+        263
+      ],
+      "cluster_fraction": [
+        0.885,
+        0,
+        0.868
+      ],
+      "samples": [
+        {
+          "file": "capture_0.csv",
+          "sha256": "845f3d2643bf7d7ea095b9f741ae1c6c7c27f53f7e93369ba556a4d304412418",
+          "hardware_identity_ok": true,
+          "frame1": 46,
+          "frame2": 45,
+          "target_valid": true,
+          "box_right_analysis": [
+            117,
+            105,
+            38,
+            90
+          ],
+          "tracking_epoch": 135,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": true,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": true,
+          "raw_distance_cm": 118,
+          "distance_valid": true,
+          "dominant_disparity": 8,
+          "roi_reason": 6,
+          "roi_population": 313,
+          "roi_cluster": 277,
+          "roi_peak": 256,
+          "mean_disparity_px": 8.068592057761732
+        },
+        {
+          "file": "capture_1.csv",
+          "sha256": "9c1223fec4d414a71c3cebd5a55255e444d837fc94c3da98861bd1e112255917",
+          "hardware_identity_ok": true,
+          "frame1": 62,
+          "frame2": 61,
+          "target_valid": false,
+          "box_right_analysis": [
+            117,
+            105,
+            36,
+            90
+          ],
+          "tracking_epoch": 148,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": false,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": false,
+          "raw_distance_cm": 0,
+          "distance_valid": false,
+          "dominant_disparity": 0,
+          "roi_reason": 1,
+          "roi_population": 0,
+          "roi_cluster": 0,
+          "roi_peak": 0,
+          "mean_disparity_px": null
+        },
+        {
+          "file": "capture_2.csv",
+          "sha256": "303ab4890c01fb2f371ceb8b18eba8f7dd644b6ab51b144a1cd658747089857e",
+          "hardware_identity_ok": true,
+          "frame1": 77,
+          "frame2": 76,
+          "target_valid": true,
+          "box_right_analysis": [
+            117,
+            105,
+            37,
+            90
+          ],
+          "tracking_epoch": 161,
+          "following_mode": true,
+          "rotation_quarters": 0,
+          "follow_roi_in_frame": true,
+          "measured_roi_on_target": true,
+          "roi_internal_valid": true,
+          "raw_distance_cm": 118,
+          "distance_valid": true,
+          "dominant_disparity": 8,
+          "roi_reason": 6,
+          "roi_population": 326,
+          "roi_cluster": 283,
+          "roi_peak": 263,
+          "mean_disparity_px": 8.070671378091873
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "source": "C:\\Users\\Li Jiahao\\Documents\\ChatGPT\\fpga\\stereo_lowlight\\calibration\\target_v1\\poses\\20261102_205826_pose01.json",
+  "statistic": "median Euclidean displacement of 40 left-eye corners between first and final snapshots",
+  "median_displacement_pixels": 3.619967374037163,
+  "minimum_pixels": 1.7721777712258453,
+  "maximum_pixels": 5.191864135836047,
+  "distance_error_cm": null,
+  "provisional_only": true,
+  "used_for_calibration": false,
+  "reason": "No ruler ground truth; sequential views moved; pixel drift cannot be treated as range error."
+}

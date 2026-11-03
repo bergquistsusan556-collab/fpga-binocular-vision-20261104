@@ -1,0 +1,322 @@
+{
+  "complete": true,
+  "pixels": 5888,
+  "both_reads_identical": true,
+  "patches": [
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "standard_deviation": 9.422,
+      "distinct_peak_gap": 0.133321,
+      "best": [
+        {
+          "ncc": 0.919502,
+          "left_minus_right": [
+            -9,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.915669,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.892833,
+          "left_minus_right": [
+            -8,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.872226,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.871151,
+          "left_minus_right": [
+            -8,
+            -28
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 8.968,
+      "distinct_peak_gap": 0.192635,
+      "best": [
+        {
+          "ncc": 0.926913,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.92383,
+          "left_minus_right": [
+            -9,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.90629,
+          "left_minus_right": [
+            -8,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.884153,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.861991,
+          "left_minus_right": [
+            -8,
+            -28
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        200,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 7.09,
+      "distinct_peak_gap": 0.116622,
+      "best": [
+        {
+          "ncc": 0.851621,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.840269,
+          "left_minus_right": [
+            -9,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.76579,
+          "left_minus_right": [
+            -8,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.748207,
+          "left_minus_right": [
+            -8,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.734999,
+          "left_minus_right": [
+            -14,
+            -28
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        216,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 10.365,
+      "distinct_peak_gap": 0.065229,
+      "best": [
+        {
+          "ncc": 0.936129,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.919576,
+          "left_minus_right": [
+            -9,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.88992,
+          "left_minus_right": [
+            -8,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.884348,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.872172,
+          "left_minus_right": [
+            -10,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        192,
+        236
+      ],
+      "size": [
+        24,
+        12
+      ],
+      "standard_deviation": 5.243,
+      "distinct_peak_gap": 0.061517,
+      "best": [
+        {
+          "ncc": 0.849429,
+          "left_minus_right": [
+            -8,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.845409,
+          "left_minus_right": [
+            -9,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.836782,
+          "left_minus_right": [
+            -10,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.832813,
+          "left_minus_right": [
+            -9,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.830076,
+          "left_minus_right": [
+            -7,
+            -27
+          ]
+        }
+      ]
+    }
+  ],
+  "warning": "One LCD frame, from independently timed camera frame buffers; local ROI translation only, not full rectification or metric calibration.",
+  "offline_census_textured_pixels": 330,
+  "offline_census_max_population": 88,
+  "offline_census_best": [
+    {
+      "dy": -28,
+      "horizontal_sign": -1,
+      "population": 47,
+      "peak": 9,
+      "cluster": 22,
+      "cluster_fraction": 0.4681
+    },
+    {
+      "dy": -27,
+      "horizontal_sign": -1,
+      "population": 50,
+      "peak": 9,
+      "cluster": 19,
+      "cluster_fraction": 0.38
+    },
+    {
+      "dy": -27,
+      "horizontal_sign": 1,
+      "population": 74,
+      "peak": 1,
+      "cluster": 18,
+      "cluster_fraction": 0.2432
+    },
+    {
+      "dy": -36,
+      "horizontal_sign": 1,
+      "population": 61,
+      "peak": 5,
+      "cluster": 13,
+      "cluster_fraction": 0.2131
+    },
+    {
+      "dy": -26,
+      "horizontal_sign": -1,
+      "population": 52,
+      "peak": 7,
+      "cluster": 11,
+      "cluster_fraction": 0.2115
+    },
+    {
+      "dy": -29,
+      "horizontal_sign": -1,
+      "population": 57,
+      "peak": 9,
+      "cluster": 12,
+      "cluster_fraction": 0.2105
+    },
+    {
+      "dy": -30,
+      "horizontal_sign": -1,
+      "population": 51,
+      "peak": 29,
+      "cluster": 10,
+      "cluster_fraction": 0.1961
+    },
+    {
+      "dy": -36,
+      "horizontal_sign": -1,
+      "population": 52,
+      "peak": 1,
+      "cluster": 10,
+      "cluster_fraction": 0.1923
+    }
+  ],
+  "offline_census_warning": "512-pixel subregion and limited search window; diagnostic only, not hardware ROI acceptance or metric accuracy."
+}

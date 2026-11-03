@@ -1,0 +1,9 @@
+# Local caches and operating-system metadata only.
+# Preserve supplied bitstreams, checkpoints, reports, IP and project files.
+.Xil/
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+desktop.ini

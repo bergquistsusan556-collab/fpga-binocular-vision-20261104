@@ -1,0 +1,227 @@
+{
+  "created": "2026-10-24T20:59:49.194434",
+  "passed": true,
+  "checks": [
+    {
+      "name": "multiple_captures",
+      "pass": true,
+      "details": 3
+    },
+    {
+      "name": "0:identities",
+      "pass": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "0:initialization",
+      "pass": true,
+      "details": 15
+    },
+    {
+      "name": "0:capture_geometry",
+      "pass": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "0:pixel_clocks",
+      "pass": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "0:output_pixels",
+      "pass": true,
+      "details": 384000
+    },
+    {
+      "name": "0:auto_exposure",
+      "pass": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "0:enhancement_brightness",
+      "pass": true,
+      "details": [
+        38.74,
+        100.596
+      ]
+    },
+    {
+      "name": "1:identities",
+      "pass": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "1:initialization",
+      "pass": true,
+      "details": 15
+    },
+    {
+      "name": "1:capture_geometry",
+      "pass": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "1:pixel_clocks",
+      "pass": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "1:output_pixels",
+      "pass": true,
+      "details": 384000
+    },
+    {
+      "name": "1:auto_exposure",
+      "pass": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "1:enhancement_brightness",
+      "pass": true,
+      "details": [
+        40.332,
+        106.465
+      ]
+    },
+    {
+      "name": "2:identities",
+      "pass": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "2:initialization",
+      "pass": true,
+      "details": 15
+    },
+    {
+      "name": "2:capture_geometry",
+      "pass": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "2:pixel_clocks",
+      "pass": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "2:output_pixels",
+      "pass": true,
+      "details": 384000
+    },
+    {
+      "name": "2:auto_exposure",
+      "pass": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "2:enhancement_brightness",
+      "pass": true,
+      "details": [
+        41.066,
+        106.734
+      ]
+    },
+    {
+      "name": "camera1:live",
+      "pass": true,
+      "details": [
+        90,
+        135,
+        179
+      ]
+    },
+    {
+      "name": "camera2:live",
+      "pass": true,
+      "details": [
+        89,
+        134,
+        178
+      ]
+    },
+    {
+      "name": "changing_camera_data",
+      "pass": true,
+      "details": [
+        [
+          43172,
+          12175,
+          3457
+        ],
+        [
+          46063,
+          24488,
+          49731
+        ]
+      ]
+    },
+    {
+      "name": "display_frames_live",
+      "pass": true,
+      "details": [
+        12,
+        8,
+        3
+      ]
+    },
+    {
+      "name": "matching_candidates_produced",
+      "pass": true,
+      "details": [
+        12874,
+        10239,
+        14267
+      ]
+    }
+  ],
+  "physical_depth_accuracy_verified": false,
+  "limitations": [
+    "No calibrated focal length/rectification or measured target distance supplied.",
+    "ILA cross-domain diagnostic snapshots are observations, not coherent frame transactions."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "created": "2026-10-24T20:49:44.089895",
+  "all_passed": true,
+  "tests": [
+    {
+      "name": "tb_sensor_brightness",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS sensor: 251 init operations, reset delay, auto exposure target, repeated register readback"
+    },
+    {
+      "name": "tb_lowlight",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS lowlight bypass alignment, dark lift and highlight saturation"
+    },
+    {
+      "name": "tb_lowlight_reference",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS 73728 independent enhanced RGB565 vectors, all colors, varied weights/history and blanking"
+    },
+    {
+      "name": "tb_algorithms",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS Census direction=0 independent cost/uniqueness reference, disparity 7: 468/528"
+    },
+    {
+      "name": "tb_reverse",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS Census direction=1 independent cost/uniqueness reference, disparity 7: 480/528"
+    },
+    {
+      "name": "tb_features",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS feature coordinates, blanking bubbles and binocular boundary isolation"
+    },
+    {
+      "name": "tb_stereo_scene",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS 400x480 RGB stereo scene, disparities 4/12/22, accepted=131332/134232 correct=131332 center=92cm"
+    },
+    {
+      "name": "tb_frames",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS histogram normalization, ROI distance arithmetic, depth bank swap and invalid clearing"
+    },
+    {
+      "name": "tb_depth_map",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS whole 800x480 disparity display, two banks, every one of 768000 output cells, invalid overwrite and field boundaries"
+    },
+    {
+      "name": "tb_roi_accuracy",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS ROI arithmetic 0.5/0.75/1/1.5/2/3m, <=1cm numerical error, mixed-depth rejection and stale clearing"
+    },
+    {
+      "name": "tb_fifo_pack",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS FIFO partial-frame discard and 32-pixel packing"
+    },
+    {
+      "name": "tb_frame_cdc",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS asynchronous frame pulse synchronization and single-event generation"
+    },
+    {
+      "name": "tb_pipeline",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS integrated full-width video pipeline, every bypass RGB pixel/DE/coordinate aligned"
+    },
+    {
+      "name": "tb_lcd_system",
+      "fresh": true,
+      "passed": true,
+      "result": "PASS complete LCD request + modeled FIFO latency + 3 full frames, raw RGB alignment, enhancement lift, color bars and frame metrics"
+    }
+  ]
+}

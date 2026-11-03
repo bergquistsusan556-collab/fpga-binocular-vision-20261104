@@ -1,0 +1,6 @@
+set root [file normalize [file join [file dirname [info script]] ..]]
+set out [file join $root build fusion]
+open_checkpoint [file join $out synthesized.dcp]
+source [file join $root constraints processing.tcl]
+report_clocks -file [file join $out clocks.rpt]
+source [file join $root tools implement.tcl]

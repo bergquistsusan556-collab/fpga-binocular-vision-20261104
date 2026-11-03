@@ -1,0 +1,322 @@
+{
+  "complete": true,
+  "pixels": 5888,
+  "both_reads_identical": true,
+  "patches": [
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "standard_deviation": 8.916,
+      "distinct_peak_gap": 0.079847,
+      "best": [
+        {
+          "ncc": 0.88446,
+          "left_minus_right": [
+            -27,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.879397,
+          "left_minus_right": [
+            -27,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.857013,
+          "left_minus_right": [
+            -27,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.851184,
+          "left_minus_right": [
+            -27,
+            -25
+          ]
+        },
+        {
+          "ncc": 0.811066,
+          "left_minus_right": [
+            -26,
+            -26
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 8.649,
+      "distinct_peak_gap": 0.068355,
+      "best": [
+        {
+          "ncc": 0.856668,
+          "left_minus_right": [
+            -27,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.85406,
+          "left_minus_right": [
+            -27,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.826683,
+          "left_minus_right": [
+            -27,
+            -25
+          ]
+        },
+        {
+          "ncc": 0.819645,
+          "left_minus_right": [
+            -27,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.788312,
+          "left_minus_right": [
+            -27,
+            -24
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        200,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 8.089,
+      "distinct_peak_gap": 0.110078,
+      "best": [
+        {
+          "ncc": 0.88217,
+          "left_minus_right": [
+            -27,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.872404,
+          "left_minus_right": [
+            -27,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.855735,
+          "left_minus_right": [
+            -27,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.837529,
+          "left_minus_right": [
+            -26,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.835979,
+          "left_minus_right": [
+            -27,
+            -25
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        216,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 3.416,
+      "distinct_peak_gap": 0.010084,
+      "best": [
+        {
+          "ncc": 0.771467,
+          "left_minus_right": [
+            -40,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.761383,
+          "left_minus_right": [
+            -27,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.753776,
+          "left_minus_right": [
+            -32,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.750111,
+          "left_minus_right": [
+            -26,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.7479,
+          "left_minus_right": [
+            -31,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        192,
+        236
+      ],
+      "size": [
+        24,
+        12
+      ],
+      "standard_deviation": 9.605,
+      "distinct_peak_gap": 0.14997,
+      "best": [
+        {
+          "ncc": 0.795666,
+          "left_minus_right": [
+            -27,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.777952,
+          "left_minus_right": [
+            -27,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.764487,
+          "left_minus_right": [
+            -27,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.726073,
+          "left_minus_right": [
+            -27,
+            -25
+          ]
+        },
+        {
+          "ncc": 0.708457,
+          "left_minus_right": [
+            -27,
+            -29
+          ]
+        }
+      ]
+    }
+  ],
+  "warning": "One LCD frame, from independently timed camera frame buffers; local ROI translation only, not full rectification or metric calibration.",
+  "offline_census_textured_pixels": 204,
+  "offline_census_max_population": 57,
+  "offline_census_best": [
+    {
+      "dy": -26,
+      "horizontal_sign": -1,
+      "population": 57,
+      "peak": 27,
+      "cluster": 15,
+      "cluster_fraction": 0.2632
+    },
+    {
+      "dy": -29,
+      "horizontal_sign": -1,
+      "population": 35,
+      "peak": 27,
+      "cluster": 9,
+      "cluster_fraction": 0.2571
+    },
+    {
+      "dy": -28,
+      "horizontal_sign": -1,
+      "population": 36,
+      "peak": 27,
+      "cluster": 9,
+      "cluster_fraction": 0.25
+    },
+    {
+      "dy": -36,
+      "horizontal_sign": 1,
+      "population": 38,
+      "peak": 22,
+      "cluster": 9,
+      "cluster_fraction": 0.2368
+    },
+    {
+      "dy": -33,
+      "horizontal_sign": 1,
+      "population": 36,
+      "peak": 22,
+      "cluster": 8,
+      "cluster_fraction": 0.2222
+    },
+    {
+      "dy": -23,
+      "horizontal_sign": 1,
+      "population": 37,
+      "peak": 19,
+      "cluster": 8,
+      "cluster_fraction": 0.2162
+    },
+    {
+      "dy": -26,
+      "horizontal_sign": 1,
+      "population": 33,
+      "peak": 15,
+      "cluster": 7,
+      "cluster_fraction": 0.2121
+    },
+    {
+      "dy": -22,
+      "horizontal_sign": 1,
+      "population": 43,
+      "peak": 19,
+      "cluster": 9,
+      "cluster_fraction": 0.2093
+    }
+  ],
+  "offline_census_warning": "512-pixel subregion and limited search window; diagnostic only, not hardware ROI acceptance or metric accuracy."
+}

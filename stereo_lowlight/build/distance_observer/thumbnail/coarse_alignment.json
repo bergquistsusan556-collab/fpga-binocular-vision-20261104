@@ -1,0 +1,90 @@
+{
+  "comparison": "R(x,y) versus L(x+dx,y+dy)",
+  "best": {
+    "dx_thumbnail": 0,
+    "dy_thumbnail": -3,
+    "dx_source_px": 0,
+    "dy_source_px": -24,
+    "normalized_correlation": 0.929821
+  },
+  "best_same_row": {
+    "dx_thumbnail": 1,
+    "dy_thumbnail": 0,
+    "dx_source_px": 8,
+    "dy_source_px": 0,
+    "normalized_correlation": 0.623776
+  },
+  "top10": [
+    {
+      "dx_thumbnail": 0,
+      "dy_thumbnail": -3,
+      "dx_source_px": 0,
+      "dy_source_px": -24,
+      "normalized_correlation": 0.929821
+    },
+    {
+      "dx_thumbnail": 0,
+      "dy_thumbnail": -4,
+      "dx_source_px": 0,
+      "dy_source_px": -32,
+      "normalized_correlation": 0.913375
+    },
+    {
+      "dx_thumbnail": 1,
+      "dy_thumbnail": -3,
+      "dx_source_px": 8,
+      "dy_source_px": -24,
+      "normalized_correlation": 0.867621
+    },
+    {
+      "dx_thumbnail": 0,
+      "dy_thumbnail": -5,
+      "dx_source_px": 0,
+      "dy_source_px": -40,
+      "normalized_correlation": 0.842322
+    },
+    {
+      "dx_thumbnail": 1,
+      "dy_thumbnail": -4,
+      "dx_source_px": 8,
+      "dy_source_px": -32,
+      "normalized_correlation": 0.826716
+    },
+    {
+      "dx_thumbnail": 0,
+      "dy_thumbnail": -2,
+      "dx_source_px": 0,
+      "dy_source_px": -16,
+      "normalized_correlation": 0.824029
+    },
+    {
+      "dx_thumbnail": 1,
+      "dy_thumbnail": -2,
+      "dx_source_px": 8,
+      "dy_source_px": -16,
+      "normalized_correlation": 0.804237
+    },
+    {
+      "dx_thumbnail": 0,
+      "dy_thumbnail": -6,
+      "dx_source_px": 0,
+      "dy_source_px": -48,
+      "normalized_correlation": 0.762983
+    },
+    {
+      "dx_thumbnail": 1,
+      "dy_thumbnail": -5,
+      "dx_source_px": 8,
+      "dy_source_px": -40,
+      "normalized_correlation": 0.745926
+    },
+    {
+      "dx_thumbnail": -1,
+      "dy_thumbnail": -4,
+      "dx_source_px": -8,
+      "dy_source_px": -32,
+      "normalized_correlation": 0.731196
+    }
+  ],
+  "limitations": "8-pixel sampling, live asynchronous thumbnail, scene-dependent global shift. Not a rectification map or calibration; do not use as a distance scale."
+}

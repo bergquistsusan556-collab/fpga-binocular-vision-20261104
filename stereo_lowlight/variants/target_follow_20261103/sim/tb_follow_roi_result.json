@@ -1,0 +1,9 @@
+{
+  "test": "tb_follow_roi",
+  "passed": true,
+  "created": "2026-11-03T19:02:31.884523+08:00",
+  "source_sha256": {
+    "variants\\target_follow_20261103\\rtl\\depth_roi_follow.v": "a98127904c66d7dcdca835164ffe23bfe7b05ee93edbca8c461c3a181574103a",
+    "variants\\target_follow_20261103\\sim\\tb_follow_roi.v": "e244234ea308077e4a4d6e8ea3948bb6ac6f4e30304fc0664f93e70c258476f4"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "actual_distance_cm": 150,
+  "actual_distance_user_reconfirmed": true,
+  "valid_calibration_reference": true,
+  "eligible_for_disparity_fit": true,
+  "raw_distance_registers_cm": [275, 277, 277],
+  "raw_register_median_cm": 277,
+  "screen_valid_count": 0,
+  "screen_valid_median_cm": null,
+  "roi_reasons": [5, 5, 5],
+  "rejection_reason": "Uncalibrated distance exceeds 250cm display guard",
+  "mean_disparities_px": [4.029220779220779, 4.0, 3.9951923076923075],
+  "roi_quality_passed_count": 3,
+  "note": "The true reference is 150cm, reconfirmed by the user. This is usable calibration evidence despite the old conversion and display guard. Original outputs 275/277/277cm remain unchanged. No range correction applied yet."
+}

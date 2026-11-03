@@ -1,0 +1,11 @@
+{
+  "test": "tb_raw_detection",
+  "passed": true,
+  "created": "2026-11-03T19:02:28.058506+08:00",
+  "source_sha256": {
+    "variants\\target_follow_20261103\\rtl\\marker7_tracker.v": "eb6329ded52fd6a6016859bc88e3a891d47f4c310c5ce6863d1fb84546ed21bb",
+    "variants\\target_follow_20261103\\rtl\\video_tools.v": "86b84fa710413d45b57e6e3ed529cad8bb46dafb77c85d742e316e5141f0ba5d",
+    "variants\\target_follow_20261103\\sim\\tb_raw_detection.v": "d9814f80f9db4af57e019a11a6bee3dd379b1db5c65c11f4d144f5f853f1660e"
+  },
+  "fixture_sha256": "93e292ba61a68313d6c8e6f180738513162295b0ee5e3580d860082d8a993a00"
+}

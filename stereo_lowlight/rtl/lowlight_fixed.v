@@ -1,0 +1,332 @@
+`timescale 1ns/1ps
+// Fixed point YCrCb enhancement. Six-cycle pipeline; controls/coordinates
+// travel with every pixel, including blanking. Gain <=4, saturating output.
+module lowlight_fixed(
+ input wire clk,rst_n,de,enable,
+ input wire [10:0] x,y,
+ input wire [15:0] rgb,
+ input wire [7:0] lum,hist_y,
+ input wire [11:0] illum_sum,
+ input wire [3:0] illum_weight,
+ output wire out_de,
+ output wire [10:0] out_x,out_y,
+ output wire [15:0] out_rgb
+);
+ function [12:0] recip;
+ input [3:0] w;
+ begin case(w)
+ 4:recip=1024;5:recip=819;6:recip=683;7:recip=585;
+ 8:recip=512;9:recip=455;10:recip=410;11:recip=372;12:recip=341;
+ default:recip=1024;
+ endcase end endfunction
+ function [10:0] gain_lut;
+ input [7:0] a;
+ begin case(a)
+      8'd0: gain_lut=11'd1024;
+      8'd1: gain_lut=11'd1024;
+      8'd2: gain_lut=11'd1024;
+      8'd3: gain_lut=11'd1024;
+      8'd4: gain_lut=11'd1024;
+      8'd5: gain_lut=11'd1024;
+      8'd6: gain_lut=11'd1024;
+      8'd7: gain_lut=11'd1024;
+      8'd8: gain_lut=11'd1024;
+      8'd9: gain_lut=11'd1024;
+      8'd10: gain_lut=11'd1024;
+      8'd11: gain_lut=11'd1024;
+      8'd12: gain_lut=11'd1024;
+      8'd13: gain_lut=11'd1024;
+      8'd14: gain_lut=11'd1024;
+      8'd15: gain_lut=11'd1024;
+      8'd16: gain_lut=11'd1024;
+      8'd17: gain_lut=11'd1024;
+      8'd18: gain_lut=11'd1024;
+      8'd19: gain_lut=11'd1024;
+      8'd20: gain_lut=11'd1024;
+      8'd21: gain_lut=11'd1024;
+      8'd22: gain_lut=11'd1024;
+      8'd23: gain_lut=11'd1024;
+      8'd24: gain_lut=11'd1024;
+      8'd25: gain_lut=11'd1024;
+      8'd26: gain_lut=11'd1007;
+      8'd27: gain_lut=11'd985;
+      8'd28: gain_lut=11'd964;
+      8'd29: gain_lut=11'd943;
+      8'd30: gain_lut=11'd924;
+      8'd31: gain_lut=11'd906;
+      8'd32: gain_lut=11'd889;
+      8'd33: gain_lut=11'd873;
+      8'd34: gain_lut=11'd858;
+      8'd35: gain_lut=11'd843;
+      8'd36: gain_lut=11'd829;
+      8'd37: gain_lut=11'd815;
+      8'd38: gain_lut=11'd802;
+      8'd39: gain_lut=11'd790;
+      8'd40: gain_lut=11'd778;
+      8'd41: gain_lut=11'd766;
+      8'd42: gain_lut=11'd755;
+      8'd43: gain_lut=11'd745;
+      8'd44: gain_lut=11'd735;
+      8'd45: gain_lut=11'd725;
+      8'd46: gain_lut=11'd715;
+      8'd47: gain_lut=11'd706;
+      8'd48: gain_lut=11'd697;
+      8'd49: gain_lut=11'd689;
+      8'd50: gain_lut=11'd680;
+      8'd51: gain_lut=11'd672;
+      8'd52: gain_lut=11'd665;
+      8'd53: gain_lut=11'd657;
+      8'd54: gain_lut=11'd650;
+      8'd55: gain_lut=11'd643;
+      8'd56: gain_lut=11'd636;
+      8'd57: gain_lut=11'd629;
+      8'd58: gain_lut=11'd622;
+      8'd59: gain_lut=11'd616;
+      8'd60: gain_lut=11'd610;
+      8'd61: gain_lut=11'd604;
+      8'd62: gain_lut=11'd598;
+      8'd63: gain_lut=11'd592;
+      8'd64: gain_lut=11'd587;
+      8'd65: gain_lut=11'd581;
+      8'd66: gain_lut=11'd576;
+      8'd67: gain_lut=11'd571;
+      8'd68: gain_lut=11'd566;
+      8'd69: gain_lut=11'd561;
+      8'd70: gain_lut=11'd556;
+      8'd71: gain_lut=11'd551;
+      8'd72: gain_lut=11'd547;
+      8'd73: gain_lut=11'd542;
+      8'd74: gain_lut=11'd538;
+      8'd75: gain_lut=11'd533;
+      8'd76: gain_lut=11'd529;
+      8'd77: gain_lut=11'd525;
+      8'd78: gain_lut=11'd521;
+      8'd79: gain_lut=11'd517;
+      8'd80: gain_lut=11'd513;
+      8'd81: gain_lut=11'd509;
+      8'd82: gain_lut=11'd506;
+      8'd83: gain_lut=11'd502;
+      8'd84: gain_lut=11'd498;
+      8'd85: gain_lut=11'd495;
+      8'd86: gain_lut=11'd491;
+      8'd87: gain_lut=11'd488;
+      8'd88: gain_lut=11'd485;
+      8'd89: gain_lut=11'd481;
+      8'd90: gain_lut=11'd478;
+      8'd91: gain_lut=11'd475;
+      8'd92: gain_lut=11'd472;
+      8'd93: gain_lut=11'd469;
+      8'd94: gain_lut=11'd466;
+      8'd95: gain_lut=11'd463;
+      8'd96: gain_lut=11'd460;
+      8'd97: gain_lut=11'd457;
+      8'd98: gain_lut=11'd454;
+      8'd99: gain_lut=11'd452;
+      8'd100: gain_lut=11'd449;
+      8'd101: gain_lut=11'd446;
+      8'd102: gain_lut=11'd444;
+      8'd103: gain_lut=11'd441;
+      8'd104: gain_lut=11'd438;
+      8'd105: gain_lut=11'd436;
+      8'd106: gain_lut=11'd433;
+      8'd107: gain_lut=11'd431;
+      8'd108: gain_lut=11'd429;
+      8'd109: gain_lut=11'd426;
+      8'd110: gain_lut=11'd424;
+      8'd111: gain_lut=11'd422;
+      8'd112: gain_lut=11'd419;
+      8'd113: gain_lut=11'd417;
+      8'd114: gain_lut=11'd415;
+      8'd115: gain_lut=11'd413;
+      8'd116: gain_lut=11'd411;
+      8'd117: gain_lut=11'd409;
+      8'd118: gain_lut=11'd406;
+      8'd119: gain_lut=11'd404;
+      8'd120: gain_lut=11'd402;
+      8'd121: gain_lut=11'd400;
+      8'd122: gain_lut=11'd398;
+      8'd123: gain_lut=11'd396;
+      8'd124: gain_lut=11'd395;
+      8'd125: gain_lut=11'd393;
+      8'd126: gain_lut=11'd391;
+      8'd127: gain_lut=11'd389;
+      8'd128: gain_lut=11'd387;
+      8'd129: gain_lut=11'd385;
+      8'd130: gain_lut=11'd384;
+      8'd131: gain_lut=11'd382;
+      8'd132: gain_lut=11'd380;
+      8'd133: gain_lut=11'd378;
+      8'd134: gain_lut=11'd377;
+      8'd135: gain_lut=11'd375;
+      8'd136: gain_lut=11'd373;
+      8'd137: gain_lut=11'd372;
+      8'd138: gain_lut=11'd370;
+      8'd139: gain_lut=11'd368;
+      8'd140: gain_lut=11'd367;
+      8'd141: gain_lut=11'd365;
+      8'd142: gain_lut=11'd364;
+      8'd143: gain_lut=11'd362;
+      8'd144: gain_lut=11'd361;
+      8'd145: gain_lut=11'd359;
+      8'd146: gain_lut=11'd358;
+      8'd147: gain_lut=11'd356;
+      8'd148: gain_lut=11'd355;
+      8'd149: gain_lut=11'd353;
+      8'd150: gain_lut=11'd352;
+      8'd151: gain_lut=11'd351;
+      8'd152: gain_lut=11'd349;
+      8'd153: gain_lut=11'd348;
+      8'd154: gain_lut=11'd346;
+      8'd155: gain_lut=11'd345;
+      8'd156: gain_lut=11'd344;
+      8'd157: gain_lut=11'd342;
+      8'd158: gain_lut=11'd341;
+      8'd159: gain_lut=11'd340;
+      8'd160: gain_lut=11'd339;
+      8'd161: gain_lut=11'd337;
+      8'd162: gain_lut=11'd336;
+      8'd163: gain_lut=11'd335;
+      8'd164: gain_lut=11'd334;
+      8'd165: gain_lut=11'd332;
+      8'd166: gain_lut=11'd331;
+      8'd167: gain_lut=11'd330;
+      8'd168: gain_lut=11'd329;
+      8'd169: gain_lut=11'd328;
+      8'd170: gain_lut=11'd327;
+      8'd171: gain_lut=11'd325;
+      8'd172: gain_lut=11'd324;
+      8'd173: gain_lut=11'd323;
+      8'd174: gain_lut=11'd322;
+      8'd175: gain_lut=11'd321;
+      8'd176: gain_lut=11'd320;
+      8'd177: gain_lut=11'd319;
+      8'd178: gain_lut=11'd318;
+      8'd179: gain_lut=11'd317;
+      8'd180: gain_lut=11'd316;
+      8'd181: gain_lut=11'd314;
+      8'd182: gain_lut=11'd313;
+      8'd183: gain_lut=11'd312;
+      8'd184: gain_lut=11'd311;
+      8'd185: gain_lut=11'd310;
+      8'd186: gain_lut=11'd309;
+      8'd187: gain_lut=11'd308;
+      8'd188: gain_lut=11'd307;
+      8'd189: gain_lut=11'd306;
+      8'd190: gain_lut=11'd305;
+      8'd191: gain_lut=11'd304;
+      8'd192: gain_lut=11'd304;
+      8'd193: gain_lut=11'd303;
+      8'd194: gain_lut=11'd302;
+      8'd195: gain_lut=11'd301;
+      8'd196: gain_lut=11'd300;
+      8'd197: gain_lut=11'd299;
+      8'd198: gain_lut=11'd298;
+      8'd199: gain_lut=11'd297;
+      8'd200: gain_lut=11'd296;
+      8'd201: gain_lut=11'd295;
+      8'd202: gain_lut=11'd294;
+      8'd203: gain_lut=11'd294;
+      8'd204: gain_lut=11'd293;
+      8'd205: gain_lut=11'd292;
+      8'd206: gain_lut=11'd291;
+      8'd207: gain_lut=11'd290;
+      8'd208: gain_lut=11'd289;
+      8'd209: gain_lut=11'd288;
+      8'd210: gain_lut=11'd288;
+      8'd211: gain_lut=11'd287;
+      8'd212: gain_lut=11'd286;
+      8'd213: gain_lut=11'd285;
+      8'd214: gain_lut=11'd284;
+      8'd215: gain_lut=11'd284;
+      8'd216: gain_lut=11'd283;
+      8'd217: gain_lut=11'd282;
+      8'd218: gain_lut=11'd281;
+      8'd219: gain_lut=11'd280;
+      8'd220: gain_lut=11'd280;
+      8'd221: gain_lut=11'd279;
+      8'd222: gain_lut=11'd278;
+      8'd223: gain_lut=11'd277;
+      8'd224: gain_lut=11'd277;
+      8'd225: gain_lut=11'd276;
+      8'd226: gain_lut=11'd275;
+      8'd227: gain_lut=11'd275;
+      8'd228: gain_lut=11'd274;
+      8'd229: gain_lut=11'd273;
+      8'd230: gain_lut=11'd272;
+      8'd231: gain_lut=11'd272;
+      8'd232: gain_lut=11'd271;
+      8'd233: gain_lut=11'd270;
+      8'd234: gain_lut=11'd270;
+      8'd235: gain_lut=11'd269;
+      8'd236: gain_lut=11'd268;
+      8'd237: gain_lut=11'd267;
+      8'd238: gain_lut=11'd267;
+      8'd239: gain_lut=11'd266;
+      8'd240: gain_lut=11'd265;
+      8'd241: gain_lut=11'd265;
+      8'd242: gain_lut=11'd264;
+      8'd243: gain_lut=11'd264;
+      8'd244: gain_lut=11'd263;
+      8'd245: gain_lut=11'd262;
+      8'd246: gain_lut=11'd262;
+      8'd247: gain_lut=11'd261;
+      8'd248: gain_lut=11'd260;
+      8'd249: gain_lut=11'd260;
+      8'd250: gain_lut=11'd259;
+      8'd251: gain_lut=11'd258;
+      8'd252: gain_lut=11'd258;
+      8'd253: gain_lut=11'd257;
+      8'd254: gain_lut=11'd257;
+      8'd255: gain_lut=11'd256;
+ default:gain_lut=256;
+ endcase end endfunction
+ function [7:0] sat;
+ input signed [20:0] a;
+ begin if(a<0)sat=0;else if(a>255)sat=255;else sat=a[7:0];end
+ endfunction
+ reg [5:0] vp,ep;
+ reg [10:0] xp[0:5],yp[0:5];
+ reg [15:0] rp[0:5];
+ reg [7:0] lp[0:4],hp[0:4];
+ reg signed [10:0] cb[0:4],cr[0:4];
+ reg [24:0] norm;
+ reg [10:0] gain;
+ reg [18:0] boosted;
+ reg [7:0] final_y;
+ reg signed [20:0] rv,gv,bv;
+ wire signed [17:0] r={10'b0,rgb[15:11],rgb[15:13]};
+ wire signed [17:0] g={10'b0,rgb[10:5],rgb[10:9]};
+ wire signed [17:0] b={10'b0,rgb[4:0],rgb[4:2]};
+ wire [7:0] boosted_sat=(boosted[18:8]>255)?8'd255:boosted[15:8];
+ wire [7:0] hist_blend=(7*{3'b0,boosted_sat}+{3'b0,hp[2]})>>3;
+ integer i;
+ always @(posedge clk or negedge rst_n) begin
+  if(!rst_n) begin
+   vp<=0;ep<=0;norm<=0;gain<=256;boosted<=0;final_y<=0;rv<=0;gv<=0;bv<=0;
+   for(i=0;i<6;i=i+1) begin xp[i]<=0;yp[i]<=0;rp[i]<=0;end
+   for(i=0;i<5;i=i+1) begin lp[i]<=0;hp[i]<=0;cb[i]<=0;cr[i]<=0;end
+  end else begin
+   vp<={vp[4:0],de};ep<={ep[4:0],enable};
+   xp[0]<=x;yp[0]<=y;rp[0]<=rgb;lp[0]<=lum;hp[0]<=hist_y;
+   cb[0]<=((-43*r-85*g+128*b)>>>8);
+   cr[0]<=((128*r-107*g-21*b)>>>8);
+   for(i=1;i<6;i=i+1) begin xp[i]<=xp[i-1];yp[i]<=yp[i-1];rp[i]<=rp[i-1];end
+   for(i=1;i<5;i=i+1) begin lp[i]<=lp[i-1];hp[i]<=hp[i-1];cb[i]<=cb[i-1];cr[i]<=cr[i-1];end
+   norm<=illum_sum*recip(illum_weight);
+   gain<=gain_lut((norm[24:12]>255)?8'd255:norm[19:12]);
+   boosted<=lp[1]*gain;
+   // Blend 1/8 CDF enhancement into 7/8 local-illumination enhancement.
+   final_y<=(lp[2]<4 || hist_blend<boosted_sat)?boosted_sat:hist_blend;
+   rv<=$signed({1'b0,final_y})+((359*cr[3])>>>8);
+   gv<=$signed({1'b0,final_y})-((88*cb[3]+183*cr[3])>>>8);
+   bv<=$signed({1'b0,final_y})+((454*cb[3])>>>8);
+  end
+ end
+ // Explicit slices avoid concatenation of oversized shift expressions.
+ wire [7:0] rs=sat(rv),gs=sat(gv),bs=sat(bv);
+ reg [15:0] packed_rgb;
+ always @(posedge clk or negedge rst_n)
+  if(!rst_n) packed_rgb<=0;else packed_rgb<={rs[7:3],gs[7:2],bs[7:3]};
+ assign out_de=vp[5];assign out_x=xp[5];assign out_y=yp[5];
+ assign out_rgb=ep[5]?packed_rgb:rp[5];
+endmodule

@@ -1,0 +1,14 @@
+{
+  "actual_distance_cm": 30,
+  "raw_distance_registers_cm": [18, 18, 18],
+  "raw_register_median_cm": 18,
+  "screen_valid_count": 0,
+  "screen_valid_median_cm": null,
+  "roi_reasons": [4, 4, 4],
+  "rejection_reason": "Uncalibrated distance falls below 25cm display guard",
+  "mean_disparities_px": [62.42857142857143, 62.25, 63.0],
+  "search_max_px": 63,
+  "near_search_boundary": true,
+  "use_for_unrestricted_calibration_fit": false,
+  "note": "Boundary diagnostic only. ROI threshold passing does not rule out truncated or incorrect matches near the disparity search limit. No valid 30cm range result has been demonstrated."
+}

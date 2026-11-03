@@ -1,0 +1,2 @@
+LCD raster snapshot; independent sensor exposures; static board required
+Each view 400x480 native. Full-field sampled every 2 pixels, or native crop x=100,y=120,size=200x240.

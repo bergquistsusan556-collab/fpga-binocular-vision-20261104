@@ -1,0 +1,5 @@
+{
+  "complete": true,
+  "pixels": 48000,
+  "warning": "384000 actual samples assembled over multiple frames/exposures; moving content is not geometrically valid."
+}

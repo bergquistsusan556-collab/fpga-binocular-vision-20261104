@@ -1,0 +1,92 @@
+{
+  "samples": [
+    {
+      "file": "capture_0.csv",
+      "sha256": "0b7b3c93b7b591ff1b6f175e01a7eea78294fa579970db9287b1691c23c43370",
+      "hardware_identity_ok": true,
+      "frame1": 72,
+      "frame2": 71,
+      "target_valid": true,
+      "box_right_analysis": [
+        121,
+        138,
+        32,
+        64
+      ],
+      "tracking_epoch": 22,
+      "following_mode": true,
+      "rotation_quarters": 0,
+      "raw_distance_cm": 0,
+      "distance_valid": false,
+      "dominant_disparity": 41,
+      "roi_reason": 2,
+      "roi_population": 41,
+      "roi_cluster": 9,
+      "roi_peak": 8,
+      "mean_disparity_px": 40.888888888888886
+    },
+    {
+      "file": "capture_1.csv",
+      "sha256": "8b5500a9ca816d6d2419dfe3b4cf8f3c4b0c3bfafb9128f737a8edecf2af6d6d",
+      "hardware_identity_ok": true,
+      "frame1": 95,
+      "frame2": 94,
+      "target_valid": true,
+      "box_right_analysis": [
+        121,
+        137,
+        31,
+        64
+      ],
+      "tracking_epoch": 41,
+      "following_mode": true,
+      "rotation_quarters": 0,
+      "raw_distance_cm": 0,
+      "distance_valid": false,
+      "dominant_disparity": 6,
+      "roi_reason": 2,
+      "roi_population": 70,
+      "roi_cluster": 9,
+      "roi_peak": 9,
+      "mean_disparity_px": 6.0
+    },
+    {
+      "file": "capture_2.csv",
+      "sha256": "01b794d94b76c79af69d694c04e28d31233a24fbe9c8f124cbb622dd5b3189fc",
+      "hardware_identity_ok": true,
+      "frame1": 116,
+      "frame2": 115,
+      "target_valid": true,
+      "box_right_analysis": [
+        112,
+        109,
+        32,
+        61
+      ],
+      "tracking_epoch": 59,
+      "following_mode": true,
+      "rotation_quarters": 0,
+      "raw_distance_cm": 153,
+      "distance_valid": false,
+      "dominant_disparity": 4,
+      "roi_reason": 6,
+      "roi_population": 62,
+      "roi_cluster": 46,
+      "roi_peak": 43,
+      "mean_disparity_px": 3.9347826086956523
+    }
+  ],
+  "hardware_checks_passed": true,
+  "cameras_advancing": true,
+  "tracking_updates_advancing": true,
+  "target_found_count": 3,
+  "target_distance_valid_count": 0,
+  "box_span_analysis_xy": [
+    9,
+    29
+  ],
+  "loss_then_reacquisition_observed": false,
+  "all_lost_samples_cleared_distance": true,
+  "dynamic_following_verified": false,
+  "distance_accuracy_verified_by_this_capture": false
+}

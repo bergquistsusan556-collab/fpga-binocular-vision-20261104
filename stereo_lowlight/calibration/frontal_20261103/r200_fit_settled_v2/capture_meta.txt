@@ -1,0 +1,6 @@
+build=front_fit_20261103
+vio_control=00db
+host_time=2026-11-03T17:46:10+0800
+bitstream=C:/Users/Li Jiahao/Documents/ChatGPT/fpga/stereo_lowlight/build/front_fit_20261103/fusion.bit
+probe_layout=compact256_roi64
+allow_zero_disparity=1

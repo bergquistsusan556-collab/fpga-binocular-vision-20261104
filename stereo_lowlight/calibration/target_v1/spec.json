@@ -1,0 +1,67 @@
+{
+  "dictionary": "DICT_4X4_50",
+  "id": 7,
+  "marker_side_mm": 160,
+  "border_bits": 1,
+  "matrix_including_border": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "board_squares": [
+    9,
+    6
+  ],
+  "inner_corners": [
+    8,
+    5
+  ],
+  "square_mm": 20,
+  "pdf_sha256": "a09798c6eadb6eea65ca13fd7731465e4bf9beef5c357d864a3826f624da066f",
+  "status": "reference target; new FPGA detector not yet deployed"
+}

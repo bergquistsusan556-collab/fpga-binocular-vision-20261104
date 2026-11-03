@@ -1,0 +1,18 @@
+{
+  "calibration_applied": false,
+  "current_variant": "video_fusion",
+  "valid_samples": 10,
+  "next_required": "Second ruler-measured distance, about 150 cm; confirm first point measurement",
+  "resumed": "2026-10-29",
+  "ruler_measurement_confirmed": false,
+  "vio_control": 219,
+  "display_range_cm": [
+    110,
+    111
+  ],
+  "min_disparity": 9.94020618556701,
+  "user_reported_cm": 100,
+  "source": "build/robust_match/frozen_frames/20261028_231030",
+  "mean_disparity": 9.983657397762938,
+  "max_disparity": 10.078189300411523
+}

@@ -1,0 +1,68 @@
+{
+  "created": "2026-11-03T17:41:31.699192",
+  "tests": [
+    {
+      "test": "tb_pipeline",
+      "passed": true,
+      "source_sha256": {
+        "rtl\\binary_template32.v": "a118ac242109d1b2d66f8a16b2d20bb71e894f5d0e1aec1e8d4f71563e28c114",
+        "rtl\\video_tools.v": "61d443e5e25d43c4d9bc77ec5517d203fc8c878e3c5974d2dec05fd0c7577df6",
+        "rtl\\stream_features.v": "223707e44f4b4002bd3850735f29b309cf4da33eac5574a9903f279c044300d6",
+        "rtl\\luma_histogram.v": "b4c6fdba96396894c49c7e14a4f9ecc5a9cf9526330c49de7fa77e1a8b97eece",
+        "rtl\\lowlight_fixed.v": "252559830824ce664f35c8f411e769dcf7e4c19622ed023f040c1d5978432b51",
+        "rtl\\stereo_row_align.v": "ec065ef58e6c14e16c03181a4a8ea9334381f76a7038e4a3311c1b0acc6cee5e",
+        "variants\\front_fit_20261103\\rtl\\stereo_census.v": "4c50f1bd73ec91f4da5371bfd95f1eaf1f2f90623a8c2a4590f0a37c1a3c6f3e",
+        "rtl\\depth_frame.v": "bc89b6290ccebc07c297ffc9355a441a8b124935f7651cdbd837ca7c0812d3a2",
+        "variants\\front_fit_20261103\\rtl\\depth_roi.v": "8ceb702875a86b2d3449438dca0054c653aa957248d93840aef1731378ea0ab0",
+        "rtl\\distance_osd.v": "cddf02a1c2d3a92698186a4f87cfe68a17cae057b3096cabef7302c302efb7c6",
+        "rtl\\video_diagnostics.v": "36a227214659aeecd12d01fa1fb7e057294c0c996e1a9341484475e8216d3249",
+        "rtl\\fusion_pipeline.v": "b333da8c22a422792df27fbddab939e2e6de1587c5ecec5093888d6e5e749286",
+        "sim\\tb_pipeline.v": "3d4232dd7ee2a6878f9e066575fc06e8607d7ba2b341c044172ee0732b59f527"
+      }
+    },
+    {
+      "test": "tb_video_pipeline",
+      "passed": true,
+      "source_sha256": {
+        "rtl\\binary_template32.v": "a118ac242109d1b2d66f8a16b2d20bb71e894f5d0e1aec1e8d4f71563e28c114",
+        "rtl\\video_tools.v": "61d443e5e25d43c4d9bc77ec5517d203fc8c878e3c5974d2dec05fd0c7577df6",
+        "rtl\\stream_features.v": "223707e44f4b4002bd3850735f29b309cf4da33eac5574a9903f279c044300d6",
+        "rtl\\luma_histogram.v": "b4c6fdba96396894c49c7e14a4f9ecc5a9cf9526330c49de7fa77e1a8b97eece",
+        "rtl\\lowlight_fixed.v": "252559830824ce664f35c8f411e769dcf7e4c19622ed023f040c1d5978432b51",
+        "rtl\\stereo_row_align.v": "ec065ef58e6c14e16c03181a4a8ea9334381f76a7038e4a3311c1b0acc6cee5e",
+        "variants\\front_fit_20261103\\rtl\\stereo_census.v": "4c50f1bd73ec91f4da5371bfd95f1eaf1f2f90623a8c2a4590f0a37c1a3c6f3e",
+        "rtl\\depth_frame.v": "bc89b6290ccebc07c297ffc9355a441a8b124935f7651cdbd837ca7c0812d3a2",
+        "variants\\front_fit_20261103\\rtl\\depth_roi.v": "8ceb702875a86b2d3449438dca0054c653aa957248d93840aef1731378ea0ab0",
+        "rtl\\distance_osd.v": "cddf02a1c2d3a92698186a4f87cfe68a17cae057b3096cabef7302c302efb7c6",
+        "rtl\\video_diagnostics.v": "36a227214659aeecd12d01fa1fb7e057294c0c996e1a9341484475e8216d3249",
+        "rtl\\fusion_pipeline.v": "b333da8c22a422792df27fbddab939e2e6de1587c5ecec5093888d6e5e749286",
+        "sim\\tb_video_pipeline.v": "4ed543b36a94d6a1f9d2ffd6ff96ec2b2ec48b9eb7b8b2638973309c2713a456"
+      }
+    },
+    {
+      "test": "tb_lcd_system",
+      "passed": true,
+      "source_sha256": {
+        "rtl\\binary_template32.v": "a118ac242109d1b2d66f8a16b2d20bb71e894f5d0e1aec1e8d4f71563e28c114",
+        "rtl\\video_tools.v": "61d443e5e25d43c4d9bc77ec5517d203fc8c878e3c5974d2dec05fd0c7577df6",
+        "rtl\\stream_features.v": "223707e44f4b4002bd3850735f29b309cf4da33eac5574a9903f279c044300d6",
+        "rtl\\luma_histogram.v": "b4c6fdba96396894c49c7e14a4f9ecc5a9cf9526330c49de7fa77e1a8b97eece",
+        "rtl\\lowlight_fixed.v": "252559830824ce664f35c8f411e769dcf7e4c19622ed023f040c1d5978432b51",
+        "rtl\\stereo_row_align.v": "ec065ef58e6c14e16c03181a4a8ea9334381f76a7038e4a3311c1b0acc6cee5e",
+        "variants\\front_fit_20261103\\rtl\\stereo_census.v": "4c50f1bd73ec91f4da5371bfd95f1eaf1f2f90623a8c2a4590f0a37c1a3c6f3e",
+        "rtl\\depth_frame.v": "bc89b6290ccebc07c297ffc9355a441a8b124935f7651cdbd837ca7c0812d3a2",
+        "variants\\front_fit_20261103\\rtl\\depth_roi.v": "8ceb702875a86b2d3449438dca0054c653aa957248d93840aef1731378ea0ab0",
+        "rtl\\distance_osd.v": "cddf02a1c2d3a92698186a4f87cfe68a17cae057b3096cabef7302c302efb7c6",
+        "rtl\\video_diagnostics.v": "36a227214659aeecd12d01fa1fb7e057294c0c996e1a9341484475e8216d3249",
+        "rtl\\fusion_pipeline.v": "b333da8c22a422792df27fbddab939e2e6de1587c5ecec5093888d6e5e749286",
+        "rtl\\stereo_observer.v": "64b6b88a4a0f0e84b508d29051550cadafc056e6382804ba3865bee03d83b561",
+        "rtl\\lcd_clock_800.v": "d8c5c7f758a20d80ac39a9bb408acd2391b7367a61b0521528ea27b549a985d6",
+        "rtl\\lcd_driver.v": "4aa607b56f9a8e4b425f8186397d3a8704ad5208ae98116a2daacb6dc5d90067",
+        "rtl\\rd_id.v": "e7591cc8dca2d1d9d548bc2b0b536f65325411a34eeed57db568f159d89306f6",
+        "rtl\\lcd_rgb_top.v": "c878676472a1511c1a8e4e5d9b88606addf3859825b48bf7556bb64f338ac360",
+        "sim\\tb_lcd_system.v": "9494b321ee5236cc81ebd2383e5054972d59de5da73273b5e02e86e530ddc809"
+      }
+    }
+  ],
+  "physical_accuracy_verified": false
+}

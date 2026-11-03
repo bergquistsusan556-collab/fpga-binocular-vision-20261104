@@ -1,0 +1,77 @@
+{
+  "patches": [
+    {
+      "right_patch_xy": [
+        80,
+        100
+      ],
+      "size": 64,
+      "left_minus_right_xy": [
+        -24,
+        -24
+      ],
+      "correlation": 0.78995
+    },
+    {
+      "right_patch_xy": [
+        200,
+        100
+      ],
+      "size": 64,
+      "left_minus_right_xy": [
+        -24,
+        -24
+      ],
+      "correlation": 0.81761
+    },
+    {
+      "right_patch_xy": [
+        80,
+        220
+      ],
+      "size": 64,
+      "left_minus_right_xy": [
+        -16,
+        -16
+      ],
+      "correlation": 0.75279
+    },
+    {
+      "right_patch_xy": [
+        200,
+        220
+      ],
+      "size": 64,
+      "left_minus_right_xy": [
+        -24,
+        -24
+      ],
+      "correlation": 0.33815
+    },
+    {
+      "right_patch_xy": [
+        80,
+        340
+      ],
+      "size": 64,
+      "left_minus_right_xy": [
+        -24,
+        -40
+      ],
+      "correlation": 0.76818
+    },
+    {
+      "right_patch_xy": [
+        200,
+        340
+      ],
+      "size": 64,
+      "left_minus_right_xy": [
+        -24,
+        -16
+      ],
+      "correlation": 0.42206
+    }
+  ],
+  "warning": "Local translations in a multi-frame image; not intrinsic/extrinsic or metric-depth calibration."
+}

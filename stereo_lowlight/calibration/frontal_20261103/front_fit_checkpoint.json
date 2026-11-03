@@ -1,0 +1,71 @@
+{
+  "created": "2026-11-03T17:50:35.465364+08:00",
+  "current_board_build": "front_fit_20261103",
+  "jtag_done_verified": true,
+  "programming": "JTAG RAM only; no Flash",
+  "vio": 219,
+  "production_files_unchanged": 35,
+  "tested_candidate_sources_unchanged": true,
+  "fresh_passed_simulations": [
+    "tb_front_fit_roi",
+    "tb_front_fit_match",
+    "tb_front_fit_reverse",
+    "tb_pipeline",
+    "tb_video_pipeline",
+    "tb_lcd_system"
+  ],
+  "timing": "WNS=0.994 WHS=0.029",
+  "artifact_sha256": {
+    "fusion.bit": "67470aa317dce0108e79f10e4fac103a437d33362acfdad8c79e1a742fc60658",
+    "fusion.ltx": "f2ffd5b42da742aef42c4f44ee12f6b17620a276ac180bd3cc02cfd9d822b2ea",
+    "synthesized.dcp": "6b1342777078d2c1055ce389efbd6780e57c6076c1f65dc420820c708b2edf92",
+    "timing_pass.txt": "b8deb527fbb4a1d9d302748ac8e165a81fe1385938c1d753422376b7ff59eef9"
+  },
+  "all_200cm_groups": {
+    "r200_v1": {
+      "reference_distance_cm": 200.0,
+      "raw_register_readings_cm": [
+        0,
+        0,
+        0
+      ],
+      "display_valid_count": 0,
+      "median_cm": null,
+      "median_error_cm": null,
+      "max_abs_error_cm": null,
+      "group_all_three_within_2cm": false
+    },
+    "r200_fit_v1": {
+      "reference_distance_cm": 200.0,
+      "raw_register_readings_cm": [
+        61,
+        62,
+        62
+      ],
+      "display_valid_count": 3,
+      "median_cm": 62,
+      "median_error_cm": -138.0,
+      "max_abs_error_cm": 139.0,
+      "group_all_three_within_2cm": false
+    },
+    "r200_fit_settled_v2": {
+      "reference_distance_cm": 200.0,
+      "raw_register_readings_cm": [
+        200,
+        203,
+        199
+      ],
+      "display_valid_count": 3,
+      "median_cm": 200,
+      "median_error_cm": 0.0,
+      "max_abs_error_cm": 3.0,
+      "group_all_three_within_2cm": false
+    }
+  },
+  "median_200cm_error_goal_met_in_later_batch": true,
+  "all_200cm_reads_within_2cm": false,
+  "startup_and_long_term_stability_verified": false,
+  "whole_30_to_200cm_accuracy_verified": false,
+  "observer_experiment": "352-bit build failed BRAM 101/100; never programmed",
+  "next_step": "User fixes frontal target at 150cm; collect three reads without reprogramming."
+}

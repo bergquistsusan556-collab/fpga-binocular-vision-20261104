@@ -1,0 +1,257 @@
+{
+  "complete": true,
+  "pixels": 5888,
+  "both_reads_identical": true,
+  "patches": [
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "standard_deviation": 11.372,
+      "distinct_peak_gap": 0.000591,
+      "best": [
+        {
+          "ncc": 0.976888,
+          "left_minus_right": [
+            10,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.976756,
+          "left_minus_right": [
+            10,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.976297,
+          "left_minus_right": [
+            -6,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.976043,
+          "left_minus_right": [
+            1,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.97593,
+          "left_minus_right": [
+            -11,
+            -28
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 12.442,
+      "distinct_peak_gap": 0.000935,
+      "best": [
+        {
+          "ncc": 0.986381,
+          "left_minus_right": [
+            0,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.98572,
+          "left_minus_right": [
+            0,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.985708,
+          "left_minus_right": [
+            -1,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.985446,
+          "left_minus_right": [
+            17,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.985339,
+          "left_minus_right": [
+            1,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        200,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 10.186,
+      "distinct_peak_gap": 3e-05,
+      "best": [
+        {
+          "ncc": 0.976155,
+          "left_minus_right": [
+            32,
+            -25
+          ]
+        },
+        {
+          "ncc": 0.976125,
+          "left_minus_right": [
+            10,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.973102,
+          "left_minus_right": [
+            10,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.972999,
+          "left_minus_right": [
+            31,
+            -25
+          ]
+        },
+        {
+          "ncc": 0.97282,
+          "left_minus_right": [
+            5,
+            -23
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        216,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 8.319,
+      "distinct_peak_gap": 0.002745,
+      "best": [
+        {
+          "ncc": 0.961603,
+          "left_minus_right": [
+            13,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.960231,
+          "left_minus_right": [
+            12,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.959982,
+          "left_minus_right": [
+            14,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.958858,
+          "left_minus_right": [
+            9,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.958355,
+          "left_minus_right": [
+            10,
+            -26
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        192,
+        236
+      ],
+      "size": [
+        24,
+        12
+      ],
+      "standard_deviation": 31.93,
+      "distinct_peak_gap": 0.000387,
+      "best": [
+        {
+          "ncc": 0.995329,
+          "left_minus_right": [
+            2,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.995264,
+          "left_minus_right": [
+            5,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.995174,
+          "left_minus_right": [
+            1,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.995059,
+          "left_minus_right": [
+            -1,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.994942,
+          "left_minus_right": [
+            -6,
+            -28
+          ]
+        }
+      ]
+    }
+  ],
+  "warning": "One LCD frame, from independently timed camera frame buffers; local ROI translation only, not full rectification or metric calibration.",
+  "offline_census_textured_pixels": 168,
+  "offline_census_max_population": 20,
+  "offline_census_best": [],
+  "offline_census_warning": "512-pixel subregion and limited search window; diagnostic only, not hardware ROI acceptance or metric accuracy."
+}

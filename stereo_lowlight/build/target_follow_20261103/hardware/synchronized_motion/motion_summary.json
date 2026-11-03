@@ -1,0 +1,857 @@
+{
+  "scope": "Hardware behavior evidence only; no ruler ground truth, no dynamic accuracy claim.",
+  "count": 60,
+  "gate_counts": {
+    "tag_not_detected": 44,
+    "texture_roi_outside_frame": 4,
+    "valid": 10,
+    "alignment_search_or_settle": 2
+  },
+  "valid_distance_range_cm": [
+    107,
+    114
+  ],
+  "range_vs_inverse_marker_size_correlation": 0.13688523882995435,
+  "timeline": [
+    {
+      "file": "capture_0.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 23,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_1.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 24,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_2.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 24,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_3.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 25,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_4.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 25,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_5.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 26,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_6.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 27,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_7.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 27,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_8.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 28,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_9.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 29,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_10.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 29,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_11.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 30,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_12.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 30,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_13.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_14.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 23,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_15.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 24,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_16.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 24,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_17.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 25,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_18.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 25,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_19.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 26,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_20.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 27,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_21.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 27,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_22.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 28,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_23.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 29,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_24.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 29,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_25.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 30,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_26.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 30,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_27.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        86,
+        136,
+        46,
+        100
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_28.csv",
+      "reason": "texture_roi_outside_frame",
+      "box": [
+        81,
+        136,
+        43,
+        98
+      ],
+      "cm": 0,
+      "row": 23,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_29.csv",
+      "reason": "texture_roi_outside_frame",
+      "box": [
+        71,
+        114,
+        46,
+        103
+      ],
+      "cm": 0,
+      "row": 23,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_30.csv",
+      "reason": "texture_roi_outside_frame",
+      "box": [
+        75,
+        122,
+        43,
+        112
+      ],
+      "cm": 0,
+      "row": 24,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_31.csv",
+      "reason": "texture_roi_outside_frame",
+      "box": [
+        73,
+        113,
+        46,
+        107
+      ],
+      "cm": 0,
+      "row": 25,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_32.csv",
+      "reason": "valid",
+      "box": [
+        76,
+        93,
+        41,
+        108
+      ],
+      "cm": 107,
+      "row": 29,
+      "peak": 766,
+      "population": 786
+    },
+    {
+      "file": "capture_33.csv",
+      "reason": "alignment_search_or_settle",
+      "box": [
+        74,
+        67,
+        52,
+        104
+      ],
+      "cm": 109,
+      "row": 30,
+      "peak": 314,
+      "population": 540
+    },
+    {
+      "file": "capture_34.csv",
+      "reason": "valid",
+      "box": [
+        77,
+        72,
+        52,
+        105
+      ],
+      "cm": 108,
+      "row": 31,
+      "peak": 277,
+      "population": 463
+    },
+    {
+      "file": "capture_35.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        77,
+        72,
+        50,
+        104
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_36.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        72,
+        54,
+        49,
+        104
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_37.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_38.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_39.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_40.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_41.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_42.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_43.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_44.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_45.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_46.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_47.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_48.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_49.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_50.csv",
+      "reason": "tag_not_detected",
+      "box": [
+        76,
+        52,
+        44,
+        111
+      ],
+      "cm": 0,
+      "row": 31,
+      "peak": 0,
+      "population": 0
+    },
+    {
+      "file": "capture_51.csv",
+      "reason": "alignment_search_or_settle",
+      "box": [
+        64,
+        55,
+        47,
+        100
+      ],
+      "cm": 113,
+      "row": 29,
+      "peak": 1069,
+      "population": 1092
+    },
+    {
+      "file": "capture_52.csv",
+      "reason": "valid",
+      "box": [
+        64,
+        51,
+        45,
+        100
+      ],
+      "cm": 113,
+      "row": 29,
+      "peak": 1170,
+      "population": 1171
+    },
+    {
+      "file": "capture_53.csv",
+      "reason": "valid",
+      "box": [
+        60,
+        51,
+        47,
+        99
+      ],
+      "cm": 113,
+      "row": 29,
+      "peak": 1013,
+      "population": 1040
+    },
+    {
+      "file": "capture_54.csv",
+      "reason": "valid",
+      "box": [
+        61,
+        50,
+        47,
+        100
+      ],
+      "cm": 113,
+      "row": 29,
+      "peak": 988,
+      "population": 1016
+    },
+    {
+      "file": "capture_55.csv",
+      "reason": "valid",
+      "box": [
+        60,
+        49,
+        47,
+        101
+      ],
+      "cm": 113,
+      "row": 29,
+      "peak": 860,
+      "population": 897
+    },
+    {
+      "file": "capture_56.csv",
+      "reason": "valid",
+      "box": [
+        60,
+        49,
+        47,
+        100
+      ],
+      "cm": 114,
+      "row": 29,
+      "peak": 722,
+      "population": 868
+    },
+    {
+      "file": "capture_57.csv",
+      "reason": "valid",
+      "box": [
+        59,
+        49,
+        48,
+        101
+      ],
+      "cm": 114,
+      "row": 29,
+      "peak": 625,
+      "population": 809
+    },
+    {
+      "file": "capture_58.csv",
+      "reason": "valid",
+      "box": [
+        58,
+        50,
+        48,
+        101
+      ],
+      "cm": 113,
+      "row": 29,
+      "peak": 804,
+      "population": 892
+    },
+    {
+      "file": "capture_59.csv",
+      "reason": "valid",
+      "box": [
+        58,
+        48,
+        48,
+        102
+      ],
+      "cm": 114,
+      "row": 29,
+      "peak": 705,
+      "population": 814
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "variant": "front_fit_20261103",
+  "calibration_status": "provisional_three_point_fit",
+  "fit": {
+    "model": "Z_cm = A_Q8 / (256*d + B_Q8)",
+    "A_Q8": 561884,
+    "B_Q8": 2677,
+    "A_cm_px": 2194.859375,
+    "B_px": 10.45703125,
+    "objective": "minimax range residual on three group median disparities",
+    "max_training_median_residual_cm": 1.8268861166439478,
+    "points": [
+      {
+        "folder": "r030_v1",
+        "actual_cm": 30.0,
+        "raw_cm": [
+          18,
+          18,
+          18
+        ],
+        "median_disparity_px": 62.42857142857143,
+        "fit_eligible": false,
+        "source_sha256": "eaa747533d3a1e39b0d90b3129cf2f7152886bd33feb6a02fe8c12ba503148c2",
+        "provisional_prediction_cm": 30.11375764675257,
+        "provisional_residual_cm": 0.11375764675257116,
+        "prediction_is_usable": false
+      },
+      {
+        "folder": "r050_v1",
+        "actual_cm": 50.0,
+        "raw_cm": [
+          35,
+          35,
+          35
+        ],
+        "median_disparity_px": 31.892857142857142,
+        "fit_eligible": true,
+        "source_sha256": "602394fc153c4aef64af89f5e306f0d6d142d9dd729728c5658d6e6b1e84a3fe",
+        "provisional_prediction_cm": 51.826804232385925,
+        "provisional_residual_cm": 1.8268042323859248,
+        "prediction_is_usable": true
+      },
+      {
+        "folder": "r100_texture_v1",
+        "actual_cm": 100.0,
+        "raw_cm": [
+          93,
+          93,
+          97
+        ],
+        "median_disparity_px": 11.9,
+        "fit_eligible": true,
+        "source_sha256": "5e572e2b75af30360b2a85b27f9e94412db21de0a3122f1bd44a8d56d0222268",
+        "provisional_prediction_cm": 98.17311388335605,
+        "provisional_residual_cm": -1.8268861166439478,
+        "prediction_is_usable": true
+      },
+      {
+        "folder": "r150_v1",
+        "actual_cm": 150.0,
+        "raw_cm": [
+          275,
+          277,
+          277
+        ],
+        "median_disparity_px": 4.0,
+        "fit_eligible": true,
+        "source_sha256": "0f7db3196fdedf935e4b4054cf00e0299f027400e1d9a7d762e8ff74f781d923",
+        "provisional_prediction_cm": 151.81950824101594,
+        "provisional_residual_cm": 1.8195082410159387,
+        "prediction_is_usable": true
+      },
+      {
+        "folder": "r200_v1",
+        "actual_cm": 200.0,
+        "raw_cm": [
+          0,
+          0,
+          0
+        ],
+        "median_disparity_px": 62.083333333333336,
+        "fit_eligible": false,
+        "source_sha256": "6980bc89483f8d7541d3c7c1a5e901d4ffd958e5511c93565c8288d1bd726a8d",
+        "provisional_prediction_cm": 30.25707669939509,
+        "provisional_residual_cm": -169.7429233006049,
+        "prediction_is_usable": false
+      }
+    ],
+    "independent_accuracy_verified": false,
+    "whole_range_verified": false,
+    "notes": [
+      "30cm reference retained; search-boundary disparity excluded from fitting",
+      "200cm reference retained; dispersed old matching excluded from fitting",
+      "Training residuals are not independent accuracy measurements"
+    ]
+  },
+  "vio_initial": 219,
+  "production_rtl_sha256": {
+    "rtl\\binary_template32.v": "a118ac242109d1b2d66f8a16b2d20bb71e894f5d0e1aec1e8d4f71563e28c114",
+    "rtl\\camera_activity.v": "5e9be2afcd30fc23b2c0f7a556942b2678ffa56e816cd884460fb1c604bc1da4",
+    "rtl\\clk_div.v": "e94d3a98e565efc96dfb164ae716f875fcf6104bed860d27af2c1f8d5680022c",
+    "rtl\\cmos_capture_data.v": "6e6164d7eeaf451694657246b6595d7887a103316943200b29d488a2f353b024",
+    "rtl\\ddr3_fifo_ctrl.v": "ef8e2d754cf6cc80ef23e2766afb4afa1846a5e5e1fa103a7e4620b04bf788ca",
+    "rtl\\ddr3_fifo_ctrl_top.v": "e72f5ae997282db3556951b2be60755dc2df30e42a065cefc954079e792b1121",
+    "rtl\\ddr3_rw.v": "1baa47dfce81f1a473b52c89bdf258600fe4a8a7e6f94384ac848d4f7fbf96ef",
+    "rtl\\ddr3_top.v": "c98bb5a769a1795aebf06adcfe71526a10ee580af94d540cf7bd27b34e0be98c",
+    "rtl\\depth_frame.v": "bc89b6290ccebc07c297ffc9355a441a8b124935f7651cdbd837ca7c0812d3a2",
+    "rtl\\depth_roi.v": "586ece8de7f99b4d19c257970e381cc14c462187e301a59d16f62357ddd68620",
+    "rtl\\distance_osd.v": "cddf02a1c2d3a92698186a4f87cfe68a17cae057b3096cabef7302c302efb7c6",
+    "rtl\\fusion_pipeline.v": "b333da8c22a422792df27fbddab939e2e6de1587c5ecec5093888d6e5e749286",
+    "rtl\\i2c_dri.v": "15241d2684ba35c3bc4a2a27647c2226c063d0441c72f46ecb628ca335e8c859",
+    "rtl\\i2c_ov5640_rgb565_cfg.v": "5fa6e46b233a00defbd0f8f11c788a56394c660dcdf4f973625c1bd8756e6c1d",
+    "rtl\\key_debounce.v": "f7ae806eeb0a9c99c34f3c25bdf1738b237a66a659fdaf805e62c93dd6a6006f",
+    "rtl\\lcd_clock_800.v": "d8c5c7f758a20d80ac39a9bb408acd2391b7367a61b0521528ea27b549a985d6",
+    "rtl\\lcd_disply.v": "c7cd036acd81bee9de70c2c0239974f3001850a638fd7eb354038da513eed9f8",
+    "rtl\\lcd_driver.v": "4aa607b56f9a8e4b425f8186397d3a8704ad5208ae98116a2daacb6dc5d90067",
+    "rtl\\lcd_rgb_top.v": "c878676472a1511c1a8e4e5d9b88606addf3859825b48bf7556bb64f338ac360",
+    "rtl\\lowlight_fixed.v": "252559830824ce664f35c8f411e769dcf7e4c19622ed023f040c1d5978432b51",
+    "rtl\\luma_histogram.v": "b4c6fdba96396894c49c7e14a4f9ecc5a9cf9526330c49de7fa77e1a8b97eece",
+    "rtl\\ov5640_dri.v": "2b303169573e6be468fb3a8977cb7461df7d7d11bdb0fae70f1dfa94c4d242c8",
+    "rtl\\picture_size.v": "5f6aba174ee1d7b96b6ad622003b63846e56c9127e51b99f90d34ae59a5b0847",
+    "rtl\\rd_id.v": "e7591cc8dca2d1d9d548bc2b0b536f65325411a34eeed57db568f159d89306f6",
+    "rtl\\red_ycbcr_morph.v": "de9fc4aaaa2cd6fa86aad3b512ad3511962258d525992f500b5fe6f377450147",
+    "rtl\\stereo_census.v": "736d42a263e5195d3376347b202c1abe86bda205ea746f93bff6c51fb31a45c2",
+    "rtl\\stereo_depth.v": "ac97ec645711f60b4889db127ec706aa5b3c051e7201077456928432597d954d",
+    "rtl\\stereo_observer.v": "64b6b88a4a0f0e84b508d29051550cadafc056e6382804ba3865bee03d83b561",
+    "rtl\\stereo_red_ruler.v": "89fffa3648be36b3c65c8f0a0abe7ebdf1f948bfaf1c23a004dce34c7147207f",
+    "rtl\\stereo_row_align.v": "ec065ef58e6c14e16c03181a4a8ea9334381f76a7038e4a3311c1b0acc6cee5e",
+    "rtl\\stream_features.v": "223707e44f4b4002bd3850735f29b309cf4da33eac5574a9903f279c044300d6",
+    "rtl\\top_dual_ov5640_lcd.v": "340fb8e685e9876e8cf9f7d622a9ec095f16d5910e358cffda05dec65228d836",
+    "rtl\\video_alg_top.v": "9fe1bfe007e95447415ac990f112b2ffa7fd83f129e0edb4cf1da178b04afe3c",
+    "rtl\\video_diagnostics.v": "36a227214659aeecd12d01fa1fb7e057294c0c996e1a9341484475e8216d3249",
+    "rtl\\video_tools.v": "61d443e5e25d43c4d9bc77ec5517d203fc8c878e3c5974d2dec05fd0c7577df6"
+  },
+  "overrides_sha256": {
+    "depth_roi.v": "8ceb702875a86b2d3449438dca0054c653aa957248d93840aef1731378ea0ab0",
+    "stereo_census.v": "4c50f1bd73ec91f4da5371bfd95f1eaf1f2f90623a8c2a4590f0a37c1a3c6f3e"
+  }
+}

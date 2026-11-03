@@ -1,0 +1,12 @@
+{
+  "seed": 564015,
+  "gain": 1.04,
+  "bias": 5,
+  "noise_standard_deviation": 0.75,
+  "disparities": [
+    4,
+    12,
+    22
+  ],
+  "source": "Observed left ROI from 20261025_002806; generated correspondence, not physical ground truth."
+}

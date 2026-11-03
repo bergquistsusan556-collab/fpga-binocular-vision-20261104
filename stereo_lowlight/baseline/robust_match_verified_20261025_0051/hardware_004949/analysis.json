@@ -1,0 +1,322 @@
+{
+  "complete": true,
+  "pixels": 5888,
+  "both_reads_identical": true,
+  "patches": [
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "standard_deviation": 8.745,
+      "distinct_peak_gap": 0.106042,
+      "best": [
+        {
+          "ncc": 0.937697,
+          "left_minus_right": [
+            -26,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.915689,
+          "left_minus_right": [
+            -26,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.906718,
+          "left_minus_right": [
+            -25,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.894107,
+          "left_minus_right": [
+            -26,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.893496,
+          "left_minus_right": [
+            -27,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 7.997,
+      "distinct_peak_gap": 0.02813,
+      "best": [
+        {
+          "ncc": 0.922357,
+          "left_minus_right": [
+            -26,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.894227,
+          "left_minus_right": [
+            -19,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.893403,
+          "left_minus_right": [
+            -26,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.88873,
+          "left_minus_right": [
+            -20,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.885026,
+          "left_minus_right": [
+            -19,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        200,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 7.316,
+      "distinct_peak_gap": 0.079448,
+      "best": [
+        {
+          "ncc": 0.918374,
+          "left_minus_right": [
+            -26,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.887765,
+          "left_minus_right": [
+            -26,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.873667,
+          "left_minus_right": [
+            -25,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.864738,
+          "left_minus_right": [
+            -26,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.848203,
+          "left_minus_right": [
+            -27,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        216,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 11.071,
+      "distinct_peak_gap": 0.049214,
+      "best": [
+        {
+          "ncc": 0.973651,
+          "left_minus_right": [
+            -27,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.971822,
+          "left_minus_right": [
+            -26,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.967371,
+          "left_minus_right": [
+            -28,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.958936,
+          "left_minus_right": [
+            -27,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.957739,
+          "left_minus_right": [
+            -25,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        192,
+        236
+      ],
+      "size": [
+        24,
+        12
+      ],
+      "standard_deviation": 8.629,
+      "distinct_peak_gap": 0.117588,
+      "best": [
+        {
+          "ncc": 0.927093,
+          "left_minus_right": [
+            -26,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.913607,
+          "left_minus_right": [
+            -26,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.883905,
+          "left_minus_right": [
+            -25,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.870666,
+          "left_minus_right": [
+            -27,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.856774,
+          "left_minus_right": [
+            -27,
+            -27
+          ]
+        }
+      ]
+    }
+  ],
+  "warning": "One LCD frame, from independently timed camera frame buffers; local ROI translation only, not full rectification or metric calibration.",
+  "offline_census_textured_pixels": 272,
+  "offline_census_max_population": 77,
+  "offline_census_best": [
+    {
+      "dy": -27,
+      "horizontal_sign": -1,
+      "population": 58,
+      "peak": 26,
+      "cluster": 17,
+      "cluster_fraction": 0.2931
+    },
+    {
+      "dy": -25,
+      "horizontal_sign": -1,
+      "population": 48,
+      "peak": 27,
+      "cluster": 14,
+      "cluster_fraction": 0.2917
+    },
+    {
+      "dy": -24,
+      "horizontal_sign": 1,
+      "population": 63,
+      "peak": 2,
+      "cluster": 17,
+      "cluster_fraction": 0.2698
+    },
+    {
+      "dy": -25,
+      "horizontal_sign": 1,
+      "population": 49,
+      "peak": 10,
+      "cluster": 13,
+      "cluster_fraction": 0.2653
+    },
+    {
+      "dy": -20,
+      "horizontal_sign": -1,
+      "population": 72,
+      "peak": 5,
+      "cluster": 19,
+      "cluster_fraction": 0.2639
+    },
+    {
+      "dy": -21,
+      "horizontal_sign": -1,
+      "population": 62,
+      "peak": 4,
+      "cluster": 16,
+      "cluster_fraction": 0.2581
+    },
+    {
+      "dy": -23,
+      "horizontal_sign": 1,
+      "population": 64,
+      "peak": 9,
+      "cluster": 15,
+      "cluster_fraction": 0.2344
+    },
+    {
+      "dy": -28,
+      "horizontal_sign": -1,
+      "population": 62,
+      "peak": 26,
+      "cluster": 14,
+      "cluster_fraction": 0.2258
+    }
+  ],
+  "offline_census_warning": "512-pixel subregion and limited search window; diagnostic only, not hardware ROI acceptance or metric accuracy."
+}

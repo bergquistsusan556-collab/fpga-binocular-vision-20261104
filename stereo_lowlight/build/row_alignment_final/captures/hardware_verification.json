@@ -1,0 +1,269 @@
+{
+  "created": "2026-10-25T00:18:32.596645",
+  "passed": true,
+  "checks": [
+    {
+      "name": "multiple_captures",
+      "pass": true,
+      "details": 3
+    },
+    {
+      "name": "0:identities",
+      "pass": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "0:initialization",
+      "pass": true,
+      "details": 207
+    },
+    {
+      "name": "0:capture_geometry",
+      "pass": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "0:pixel_clocks",
+      "pass": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "0:output_pixels",
+      "pass": true,
+      "details": 384000
+    },
+    {
+      "name": "0:auto_exposure",
+      "pass": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "0:enhancement_brightness",
+      "pass": true,
+      "details": [
+        99.899,
+        152.495
+      ]
+    },
+    {
+      "name": "0:roi_counters",
+      "pass": true,
+      "details": [
+        4,
+        6,
+        62
+      ]
+    },
+    {
+      "name": "0:roi_diagnosis",
+      "pass": true,
+      "details": 2
+    },
+    {
+      "name": "1:identities",
+      "pass": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "1:initialization",
+      "pass": true,
+      "details": 15
+    },
+    {
+      "name": "1:capture_geometry",
+      "pass": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "1:pixel_clocks",
+      "pass": true,
+      "details": [
+        48.045,
+        47.996
+      ]
+    },
+    {
+      "name": "1:output_pixels",
+      "pass": true,
+      "details": 384000
+    },
+    {
+      "name": "1:auto_exposure",
+      "pass": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "1:enhancement_brightness",
+      "pass": true,
+      "details": [
+        100.305,
+        152.854
+      ]
+    },
+    {
+      "name": "1:roi_counters",
+      "pass": true,
+      "details": [
+        6,
+        7,
+        117
+      ]
+    },
+    {
+      "name": "1:roi_diagnosis",
+      "pass": true,
+      "details": 2
+    },
+    {
+      "name": "2:identities",
+      "pass": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "2:initialization",
+      "pass": true,
+      "details": 15
+    },
+    {
+      "name": "2:capture_geometry",
+      "pass": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "2:pixel_clocks",
+      "pass": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "2:output_pixels",
+      "pass": true,
+      "details": 384000
+    },
+    {
+      "name": "2:auto_exposure",
+      "pass": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "2:enhancement_brightness",
+      "pass": true,
+      "details": [
+        99.842,
+        152.15
+      ]
+    },
+    {
+      "name": "2:roi_counters",
+      "pass": true,
+      "details": [
+        5,
+        10,
+        88
+      ]
+    },
+    {
+      "name": "2:roi_diagnosis",
+      "pass": true,
+      "details": 2
+    },
+    {
+      "name": "camera1:live",
+      "pass": true,
+      "details": [
+        60,
+        84,
+        108
+      ]
+    },
+    {
+      "name": "camera2:live",
+      "pass": true,
+      "details": [
+        59,
+        83,
+        107
+      ]
+    },
+    {
+      "name": "changing_camera_data",
+      "pass": true,
+      "details": [
+        [
+          25324,
+          42810,
+          24315
+        ],
+        [
+          40979,
+          11003,
+          18787
+        ]
+      ]
+    },
+    {
+      "name": "display_frames_live",
+      "pass": true,
+      "details": [
+        9,
+        2,
+        11
+      ]
+    },
+    {
+      "name": "matching_candidates_produced",
+      "pass": true,
+      "details": [
+        17603,
+        17945,
+        17797
+      ]
+    }
+  ],
+  "physical_depth_accuracy_verified": false,
+  "limitations": [
+    "No calibrated focal length/rectification or measured target distance supplied.",
+    "ILA cross-domain diagnostic snapshots are observations, not coherent frame transactions."
+  ]
+}

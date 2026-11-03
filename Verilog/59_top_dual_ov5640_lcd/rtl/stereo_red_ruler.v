@@ -1,0 +1,330 @@
+`timescale 1ns/1ps
+//------------------------------------------------------------------------------
+// stereo_red_ruler
+//   Simplified fixed-box red/orange stereo ranging.
+//   No SAD, no row buffers. Only two things matter:
+//     1) the same red/orange target is visible in both camera halves
+//     2) it lies inside the central horizontal recognition strip
+//------------------------------------------------------------------------------
+module stereo_red_ruler #(
+    parameter integer FOCAL_PX    = 346,
+    parameter integer BASELINE_MM = 60,
+    parameter integer UPDATE_FRAMES = 5
+)(
+    input  wire        clk,
+    input  wire        rst_n,
+    input  wire        de,
+    input  wire [10:0] x,
+    input  wire [10:0] y,
+    input  wire [10:0] h_disp,
+    input  wire [10:0] v_disp,
+    input  wire        mask_de,
+    input  wire [10:0] mask_x,
+    input  wire [10:0] mask_y,
+    input  wire [15:0] din,
+    input  wire [8:0]  cal_scale,
+    input  wire        filter_enable,
+    input  wire        red_mask,
+    input  wire [10:0] l_roi_cx,
+    input  wire [10:0] l_roi_cy,
+    input  wire [10:0] r_roi_cx,
+    input  wire [10:0] r_roi_cy,
+    input  wire        l_roi_valid,
+    input  wire        r_roi_valid,
+    output reg  [15:0] dout,
+    output reg  [15:0] distance_cm,
+    output reg         distance_valid,
+    output reg  [5:0]  disparity_locked
+);
+
+    // The outline drawn on screen is the SAME window the red pixels are counted
+    // in, so the box, the measurement ROI and the distance number always agree.
+    // Before a target is locked the window falls back to the centre of each half.
+    //
+    // Size trade-off: a smaller window rejects nearby red distractors and keeps
+    // the measured centre tight on the target, but it also leaves less margin
+    // when the tracker lags, so the blob can fall outside and the distance
+    // blanks out.  50x50 sits just outside the 40x40 follow box.
+    localparam [10:0] DYN_HALF_W = 11'd25;
+    localparam [10:0] DYN_HALF_H = 11'd25;
+    localparam [15:0] MIN_RED_PIX = 16'd2;
+    localparam integer DIST_CONST_CM = (FOCAL_PX * BASELINE_MM + 5) / 10;
+
+    wire [4:0] r5 = din[15:11];
+    wire [5:0] g6 = din[10:5];
+    wire [4:0] b5 = din[4:0];
+    wire [7:0] r8 = {r5, r5[4:2]};
+    wire [7:0] g8 = {g6, g6[5:4]};
+    wire [7:0] b8 = {b5, b5[4:2]};
+
+    wire signed [11:0] cb_calc = 12'sd128
+        - $signed({4'b0, r8[7:1]})
+        - $signed({4'b0, g8[7:2]})
+        + $signed({4'b0, b8[7:1]});
+    wire signed [11:0] cr_calc = 12'sd128
+        + $signed({4'b0, r8[7:1]})
+        - $signed({4'b0, g8[7:3]})
+        - $signed({4'b0, b8[7:4]});
+    wire [7:0] cb8 = (cb_calc < 0) ? 8'd0 :
+                     ((cb_calc > 12'sd255) ? 8'd255 : cb_calc[7:0]);
+    wire [7:0] cr8 = (cr_calc < 0) ? 8'd0 :
+                     ((cr_calc > 12'sd255) ? 8'd255 : cr_calc[7:0]);
+    wire [8:0] rg_diff = (r8 > g8) ? ({1'b0, r8} - {1'b0, g8}) : 9'd0;
+    wire [8:0] rb_diff = (r8 > b8) ? ({1'b0, r8} - {1'b0, b8}) : 9'd0;
+
+    wire red_pix = red_mask;
+
+    wire [10:0] half_x = h_disp >> 1;
+    wire [11:0] center_x = {1'b0, half_x} >> 1;
+    wire [11:0] center_y = {1'b0, v_disp} >> 1;
+    wire [11:0] l_dyn_cx = l_roi_valid ? {1'b0, l_roi_cx} : center_x;
+    wire [11:0] l_dyn_cy = l_roi_valid ? {1'b0, l_roi_cy} : center_y;
+    wire [11:0] r_dyn_cx = r_roi_valid ? {1'b0, r_roi_cx} : center_x;
+    wire [11:0] r_dyn_cy = r_roi_valid ? {1'b0, r_roi_cy} : center_y;
+    wire [11:0] l_roi_l = (l_dyn_cx > DYN_HALF_W) ? (l_dyn_cx - DYN_HALF_W) : 12'd0;
+    wire [11:0] l_roi_r = ((l_dyn_cx + DYN_HALF_W) < half_x) ? (l_dyn_cx + DYN_HALF_W) : (half_x - 11'd1);
+    wire [11:0] l_roi_t = (l_dyn_cy > DYN_HALF_H) ? (l_dyn_cy - DYN_HALF_H) : 12'd0;
+    wire [11:0] l_roi_b = ((l_dyn_cy + DYN_HALF_H) < v_disp) ? (l_dyn_cy + DYN_HALF_H) : (v_disp - 11'd1);
+    wire [11:0] r_roi_l = (r_dyn_cx > DYN_HALF_W) ? (r_dyn_cx - DYN_HALF_W) : 12'd0;
+    wire [11:0] r_roi_r = ((r_dyn_cx + DYN_HALF_W) < half_x) ? (r_dyn_cx + DYN_HALF_W) : (half_x - 11'd1);
+    wire [11:0] r_roi_t = (r_dyn_cy > DYN_HALF_H) ? (r_dyn_cy - DYN_HALF_H) : 12'd0;
+    wire [11:0] r_roi_b = ((r_dyn_cy + DYN_HALF_H) < v_disp) ? (r_dyn_cy + DYN_HALF_H) : (v_disp - 11'd1);
+
+    wire [11:0] right_local_m = {1'b0, mask_x} - {1'b0, half_x};
+    wire in_left_box = mask_de && (mask_x < half_x) && ({1'b0, mask_x} >= l_roi_l) && ({1'b0, mask_x} <= l_roi_r) && ({1'b0, mask_y} >= l_roi_t) && ({1'b0, mask_y} <= l_roi_b);
+    wire in_right_box = mask_de && (mask_x >= half_x) && (right_local_m >= r_roi_l) && (right_local_m <= r_roi_r) && ({1'b0, mask_y} >= r_roi_t) && ({1'b0, mask_y} <= r_roi_b);
+    wire red_left_pix  = in_left_box  && red_pix;
+    wire red_right_pix = in_right_box && red_pix;
+
+    // Two-stage delay keeps raw video and red overlay aligned.
+    reg [10:0] x_p0, y_p0, x_o, y_o;
+    reg [15:0] din_p0, din_o;
+    reg        de_p0, de_o;
+    reg        rl_p0, rr_p0, rl_o, rr_o;
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            x_p0 <= 11'd0; y_p0 <= 11'd0; din_p0 <= 16'd0; de_p0 <= 1'b0;
+            rl_p0 <= 1'b0; rr_p0 <= 1'b0;
+            x_o  <= 11'd0; y_o  <= 11'd0; din_o  <= 16'd0; de_o  <= 1'b0;
+            rl_o  <= 1'b0; rr_o  <= 1'b0;
+        end
+        else begin
+            x_p0 <= x; y_p0 <= y; din_p0 <= din; de_p0 <= de;
+            rl_p0 <= red_left_pix; rr_p0 <= red_right_pix;
+            x_o <= x_p0; y_o <= y_p0; din_o <= din_p0; de_o <= de_p0;
+            rl_o <= rl_p0; rr_o <= rr_p0;
+        end
+    end
+
+    wire [11:0] left_local_o = {1'b0, x_o};
+    wire [11:0] right_local_o = {1'b0, x_o} - {1'b0, half_x};
+    wire [11:0] yo12 = {1'b0, y_o};
+
+    // Each half draws the window its own measurement uses: the left outline
+    // follows the left target, the right outline the right target.
+    wire left_border = de_o && (x_o < half_x) &&
+                       (left_local_o >= l_roi_l) && (left_local_o <= l_roi_r) &&
+                       (yo12 >= l_roi_t) && (yo12 <= l_roi_b) &&
+                       ((left_local_o == l_roi_l) || (left_local_o == l_roi_r) ||
+                        (yo12 == l_roi_t) || (yo12 == l_roi_b));
+    wire right_border = de_o && (x_o >= half_x) &&
+                        (right_local_o >= r_roi_l) && (right_local_o <= r_roi_r) &&
+                        (yo12 >= r_roi_t) && (yo12 <= r_roi_b) &&
+                        ((right_local_o == r_roi_l) || (right_local_o == r_roi_r) ||
+                         (yo12 == r_roi_t) || (yo12 == r_roi_b));
+
+    always @(*) begin
+        if (de_o) begin
+            dout = din_o;
+            if (left_border || right_border)
+                dout = 16'h07E0;
+            // Keep the detected target's real color; distance is shown by the OSD.
+                ;
+        end
+        else
+            dout = din_o;
+    end
+
+    //------------------------------------------------------------------
+    // Red target center tracking and distance calculation.
+    //------------------------------------------------------------------
+    reg [10:0] l_minx, l_maxx, r_minx, r_maxx;
+    reg [10:0] mask_y_prev;
+    reg [15:0] l_count, r_count;
+    reg        l_seen, r_seen;
+    reg [15:0] dist_hist0, dist_hist1;
+    reg [1:0]  miss_count;
+    reg [15:0] update_count;
+
+    reg  [8:0]  cal_scale_d;
+    wire        cal_changed = (cal_scale != cal_scale_d);
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            cal_scale_d <= 9'd212;
+        else
+            cal_scale_d <= cal_scale;
+    end
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            mask_y_prev <= 11'd0;
+        else if (mask_de)
+            mask_y_prev <= mask_y;
+    end
+
+    wire mask_frame_start = mask_de && (mask_y < mask_y_prev);
+    wire frame_end   = de_o && (x_o == (h_disp - 11'd1)) &&
+                       (y_o == (v_disp - 11'd1));
+
+    reg [15:0] dist_rom [0:63];
+    genvar dg;
+    generate
+        for (dg = 0; dg < 64; dg = dg + 1) begin : g_dist_rom
+            initial begin
+                if (dg == 0)
+                    dist_rom[dg] = 16'd0;
+                else
+                    dist_rom[dg] = DIST_CONST_CM / dg;
+            end
+        end
+    endgenerate
+
+    wire [11:0] l_center = ({1'b0, l_minx} + {1'b0, l_maxx}) >> 1;
+    wire [11:0] r_center = ({1'b0, r_minx} + {1'b0, r_maxx}) >> 1;
+    wire [11:0] red_diff = (l_center >= r_center) ?
+                           (l_center - r_center) : (r_center - l_center);
+    wire [5:0]  red_disp = (red_diff == 0) ? 6'd1 :
+                           ((red_diff > 63) ? 6'd63 : red_diff[5:0]);
+    // Keep a 2-pixel minimum so distant targets can still produce a result.
+    // A 0/1-pixel result is rejected to avoid the bogus 2076 cm reading.
+    wire        red_disp_valid = (red_diff >= 12'd2) && (red_diff <= 12'd63);
+    wire [15:0] raw_distance_base = dist_rom[red_disp];
+    wire [24:0] scaled_distance_full = {9'd0, raw_distance_base} * {16'd0, cal_scale};
+    wire [15:0] raw_distance = scaled_distance_full[23:8];
+    wire [15:0] median_distance = (dist_hist0 < dist_hist1) ?
+        ((dist_hist1 < raw_distance) ? dist_hist1 :
+         ((dist_hist0 < raw_distance) ? raw_distance : dist_hist0)) :
+        ((dist_hist0 < raw_distance) ? dist_hist0 :
+         ((dist_hist1 < raw_distance) ? raw_distance : dist_hist1));
+    wire [15:0] filtered_distance = filter_enable ? median_distance : raw_distance;
+    wire        update_due = !filter_enable || (update_count >= (UPDATE_FRAMES - 1));
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            l_minx <= 11'h7FF; l_maxx <= 11'd0;
+            r_minx <= 11'h7FF; r_maxx <= 11'd0;
+            l_count <= 16'd0; r_count <= 16'd0;
+            l_seen <= 1'b0; r_seen <= 1'b0;
+            dist_hist0 <= 16'd0; dist_hist1 <= 16'd0; miss_count <= 2'd0; update_count <= 16'd0;
+            distance_cm <= 16'd0;
+            distance_valid <= 1'b0;
+            disparity_locked <= 6'd0;
+        end
+        else if (cal_changed) begin
+            dist_hist0 <= 16'd0;
+            dist_hist1 <= 16'd0;
+            miss_count <= 2'd0;
+            update_count <= 16'd0;
+            distance_cm <= 16'd0;
+            distance_valid <= 1'b0;
+            disparity_locked <= 6'd0;
+        end
+        else begin
+            if (mask_frame_start) begin
+                if (update_due) begin
+                    update_count <= 16'd0;
+                    // Use the completed previous frame to update distance.
+                    if (l_seen && r_seen && red_disp_valid &&
+                        (l_count >= MIN_RED_PIX) && (r_count >= MIN_RED_PIX)) begin
+                        if (!distance_valid) begin
+                            dist_hist0 <= raw_distance;
+                            dist_hist1 <= raw_distance;
+                            distance_cm <= raw_distance;
+                        end
+                        else begin
+                            dist_hist1 <= dist_hist0;
+                            dist_hist0 <= raw_distance;
+                            distance_cm <= filtered_distance;
+                        end
+                        disparity_locked <= red_disp;
+                        distance_valid <= 1'b1;
+                        miss_count <= 2'd0;
+                    end
+                    else begin
+                        // Hold through one missed update, then clear.
+                        if (miss_count >= 2'd1) begin
+                            dist_hist0 <= 16'd0;
+                            dist_hist1 <= 16'd0;
+                            distance_cm <= 16'd0;
+                            distance_valid <= 1'b0;
+                            disparity_locked <= 6'd0;
+                            miss_count <= 2'd0;
+                        end
+                        else begin
+                            miss_count <= miss_count + 2'd1;
+                        end
+                    end
+                end
+                else begin
+                    update_count <= update_count + 16'd1;
+                end
+
+                // Reset statistics for the new frame.
+                l_minx <= 11'h7FF; l_maxx <= 11'd0;
+                r_minx <= 11'h7FF; r_maxx <= 11'd0;
+                l_count <= 16'd0; r_count <= 16'd0;
+                l_seen <= 1'b0; r_seen <= 1'b0;
+            end
+
+            if (mask_de) begin
+                if (red_left_pix) begin
+                    l_count <= l_count + 16'd1;
+                    if (!l_seen) begin
+                        l_minx <= mask_x; l_maxx <= mask_x; l_seen <= 1'b1;
+                    end
+                    else begin
+                        if (mask_x < l_minx) l_minx <= mask_x;
+                        if (mask_x > l_maxx) l_maxx <= mask_x;
+                    end
+                end
+
+                if (red_right_pix) begin
+                    r_count <= r_count + 16'd1;
+                    if (!r_seen) begin
+                        r_minx <= right_local_m[10:0]; r_maxx <= right_local_m[10:0];
+                        r_seen <= 1'b1;
+                    end
+                    else begin
+                        if (right_local_m[10:0] < r_minx) r_minx <= right_local_m[10:0];
+                        if (right_local_m[10:0] > r_maxx) r_maxx <= right_local_m[10:0];
+                    end
+                end
+            end
+
+        end
+    end
+
+endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

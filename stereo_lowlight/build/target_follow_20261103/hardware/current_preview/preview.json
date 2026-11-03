@@ -1,0 +1,13 @@
+{
+  "warning": "Coarse raw preview spans six block reads, not a synchronized capture.",
+  "eyes": {
+    "left": {
+      "ids": [],
+      "corners": []
+    },
+    "right": {
+      "ids": [],
+      "corners": []
+    }
+  }
+}

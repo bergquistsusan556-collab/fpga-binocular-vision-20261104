@@ -1,0 +1,4 @@
+build=front_range_20261103
+vio_control=00db
+host_time=2026-11-03T17:13:34+0800
+bitstream=C:/Users/Li Jiahao/Documents/ChatGPT/fpga/stereo_lowlight/build/front_range_20261103/fusion.bit

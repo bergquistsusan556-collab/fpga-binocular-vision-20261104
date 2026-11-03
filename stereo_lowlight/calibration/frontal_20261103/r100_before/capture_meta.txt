@@ -1,0 +1,4 @@
+build=video_fusion
+vio_control=00db
+host_time=2026-11-03T16:49:41+0800
+bitstream=C:/Users/Li Jiahao/Documents/ChatGPT/fpga/stereo_lowlight/build/video_fusion/fusion.bit

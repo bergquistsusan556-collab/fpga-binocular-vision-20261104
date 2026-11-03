@@ -1,0 +1,229 @@
+`timescale 1ns/1ps
+// Real-time video processing for the dual OV5640 HDMI pipeline.
+// Modes are selected by KEY0 and shown on LED[2:0].
+// 0 RAW, 1 GRAY, 2 BINARY, 3 EDGE, 4 4x FRAME DIFF,
+// 5 COLOR TEMPLATE / RED TARGET BOX, 6 INVERT.
+module video_alg_top(
+    input  wire        clk,
+    input  wire        rst_n,
+    input  wire        de,
+    input  wire [10:0] x,
+    input  wire [10:0] y,
+    input  wire [2:0]  mode,
+    input  wire [15:0] din,
+    output reg  [15:0] dout
+);
+
+    localparam MODE_RAW    = 3'd0;
+    localparam MODE_GRAY   = 3'd1;
+    localparam MODE_BINARY = 3'd2;
+    localparam MODE_EDGE   = 3'd3;
+    localparam MODE_DIFF   = 3'd4;
+    localparam MODE_TARGET = 3'd5;
+    localparam MODE_INVERT = 3'd6;
+
+    wire [4:0] r5 = din[15:11];
+    wire [5:0] g6 = din[10:5];
+    wire [4:0] b5 = din[4:0];
+    wire [7:0] r8 = {r5, r5[4:2]};
+    wire [7:0] g8 = {g6, g6[5:4]};
+    wire [7:0] b8 = {b5, b5[4:2]};
+    wire [9:0] lum_sum = {1'b0, r8} + {g8, 1'b0} + {1'b0, b8};
+    wire [7:0] lum = lum_sum[9:2];
+
+    wire [15:0] gray565 = {lum[7:3], lum[7:2], lum[7:3]};
+    wire [15:0] binary565 = (lum > 8'd96) ? 16'hFFFF : 16'h0000;
+    wire [15:0] invert565 = ~din;
+
+    // Line buffer used by the 1-D horizontal/vertical edge detector.
+    reg [7:0] line_mem [0:1023];
+    reg [7:0] line_q;
+    reg [7:0] lum_d1;
+
+    always @(posedge clk) begin
+        if (de) begin
+            line_q <= line_mem[x[9:0]];
+            line_mem[x[9:0]] <= lum;
+        end
+    end
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            lum_d1 <= 8'd0;
+        else if (de)
+            lum_d1 <= lum;
+    end
+
+    wire [7:0] diff_h = (lum > lum_d1) ? (lum - lum_d1) : (lum_d1 - lum);
+    wire [7:0] diff_v = (lum > line_q) ? (lum - line_q) : (line_q - lum);
+    wire [8:0] edge_sum = {1'b0, diff_h} + {1'b0, diff_v};
+    wire [15:0] edge565 = (edge_sum > 9'd48) ? 16'hFFFF : 16'h0000;
+
+    // 4x downsampled temporal frame buffer.
+    // One byte is stored for each 4x4 block of the 1024x768 output.
+    reg [7:0] frame_mem [0:131071];
+    reg [7:0] frame_q;
+    reg [7:0] lum_d2;
+    reg       sample_d;
+    reg [7:0] block_diff;
+
+    wire [16:0] frame_addr = {x[10], y[9:2], x[9:2]};
+    wire        sample_now = de && (x[1:0] == 2'b00) && (y[1:0] == 2'b00);
+
+    always @(posedge clk) begin
+        if (sample_now) begin
+            frame_q <= frame_mem[frame_addr];
+            frame_mem[frame_addr] <= lum;
+        end
+    end
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            lum_d2     <= 8'd0;
+            sample_d   <= 1'b0;
+            block_diff <= 8'd0;
+        end
+        else begin
+            if (sample_now) begin
+                lum_d2   <= lum;
+                sample_d <= 1'b1;
+            end
+            else begin
+                sample_d <= 1'b0;
+            end
+
+            if (sample_d) begin
+                if (lum_d2 > frame_q)
+                    block_diff <= lum_d2 - frame_q;
+                else
+                    block_diff <= frame_q - lum_d2;
+            end
+        end
+    end
+
+    wire [15:0] dim565 = {din[15:11] >> 1, din[10:5] >> 1, din[4:0] >> 1};
+    wire [15:0] diff565 = (block_diff > 8'd20) ? 16'hF800 : dim565;
+
+    // Simple colour-template / red-target detector with a previous-frame box.
+    // This is intentionally small enough to run in the display pixel clock.
+    wire red_pix = (r5 > 5'd16) && (g6 < 6'd28) && (b5 < 5'd20) &&
+                   (r5 > {g6[5:1]});
+
+    reg [10:0] l_minx, l_maxx, l_miny, l_maxy;
+    reg [10:0] r_minx, r_maxx, r_miny, r_maxy;
+    reg        l_seen, r_seen;
+    reg [10:0] l_box_x0, l_box_x1, l_box_y0, l_box_y1;
+    reg [10:0] r_box_x0, r_box_x1, r_box_y0, r_box_y1;
+    reg        l_box_valid, r_box_valid;
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            l_minx <= 11'd0; l_maxx <= 11'd0; l_miny <= 11'd0; l_maxy <= 11'd0;
+            r_minx <= 11'd0; r_maxx <= 11'd0; r_miny <= 11'd0; r_maxy <= 11'd0;
+            l_seen <= 1'b0; r_seen <= 1'b0;
+            l_box_x0 <= 11'd0; l_box_x1 <= 11'd0; l_box_y0 <= 11'd0; l_box_y1 <= 11'd0;
+            r_box_x0 <= 11'd0; r_box_x1 <= 11'd0; r_box_y0 <= 11'd0; r_box_y1 <= 11'd0;
+            l_box_valid <= 1'b0; r_box_valid <= 1'b0;
+        end
+        else if (de) begin
+            if (red_pix && (x < 11'd512)) begin
+                if (!l_seen) begin
+                    l_minx <= x; l_maxx <= x; l_miny <= y; l_maxy <= y;
+                end
+                else begin
+                    if (x < l_minx) l_minx <= x;
+                    if (x > l_maxx) l_maxx <= x;
+                    if (y < l_miny) l_miny <= y;
+                    if (y > l_maxy) l_maxy <= y;
+                end
+                l_seen <= 1'b1;
+            end
+            else if (red_pix) begin
+                if (!r_seen) begin
+                    r_minx <= x - 11'd512; r_maxx <= x - 11'd512;
+                    r_miny <= y; r_maxy <= y;
+                end
+                else begin
+                    if ((x - 11'd512) < r_minx) r_minx <= x - 11'd512;
+                    if ((x - 11'd512) > r_maxx) r_maxx <= x - 11'd512;
+                    if (y < r_miny) r_miny <= y;
+                    if (y > r_maxy) r_maxy <= y;
+                end
+                r_seen <= 1'b1;
+            end
+
+            if ((x == 11'd1023) && (y == 11'd767)) begin
+                if (l_seen) begin
+                    l_box_x0 <= l_minx; l_box_x1 <= l_maxx;
+                    l_box_y0 <= l_miny; l_box_y1 <= l_maxy;
+                    l_box_valid <= 1'b1;
+                end
+                else begin
+                    l_box_valid <= 1'b0;
+                end
+
+                if (r_seen) begin
+                    r_box_x0 <= r_minx; r_box_x1 <= r_maxx;
+                    r_box_y0 <= r_miny; r_box_y1 <= r_maxy;
+                    r_box_valid <= 1'b1;
+                end
+                else begin
+                    r_box_valid <= 1'b0;
+                end
+
+                l_seen <= 1'b0;
+                r_seen <= 1'b0;
+            end
+        end
+    end
+
+    wire [10:0] xr = x - 11'd512;
+    wire in_l = l_box_valid && (x < 11'd512) &&
+                (x >= l_box_x0) && (x <= l_box_x1) &&
+                (y >= l_box_y0) && (y <= l_box_y1);
+    wire in_r = r_box_valid && (x >= 11'd512) &&
+                (xr >= r_box_x0) && (xr <= r_box_x1) &&
+                (y >= r_box_y0) && (y <= r_box_y1);
+    wire border_l = in_l && ((x == l_box_x0) || (x == l_box_x1) ||
+                             (y == l_box_y0) || (y == l_box_y1));
+    wire border_r = in_r && ((xr == r_box_x0) || (xr == r_box_x1) ||
+                             (y == r_box_y0) || (y == r_box_y1));
+    wire [15:0] target565 = (border_l || border_r) ? 16'h07E0 :
+                            (red_pix ? 16'hF800 : din);
+
+    reg [15:0] mode_color;
+    always @(*) begin
+        case (mode)
+            MODE_RAW:    mode_color = 16'hFFFF;
+            MODE_GRAY:   mode_color = 16'h8410;
+            MODE_BINARY: mode_color = 16'h0000;
+            MODE_EDGE:   mode_color = 16'h07E0;
+            MODE_DIFF:   mode_color = 16'hF800;
+            MODE_TARGET: mode_color = 16'hF81F;
+            MODE_INVERT: mode_color = 16'h07FF;
+            default:     mode_color = 16'hFFFF;
+        endcase
+    end
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            dout <= 16'd0;
+        end
+        else if (de) begin
+            case (mode)
+                MODE_RAW:    dout <= din;
+                MODE_GRAY:   dout <= gray565;
+                MODE_BINARY: dout <= binary565;
+                MODE_EDGE:   dout <= edge565;
+                MODE_DIFF:   dout <= diff565;
+                MODE_TARGET: dout <= target565;
+                MODE_INVERT: dout <= invert565;
+                default:     dout <= din;
+            endcase
+
+            if ((x < 11'd16) && (y < 11'd16))
+                dout <= mode_color;
+        end
+    end
+
+endmodule

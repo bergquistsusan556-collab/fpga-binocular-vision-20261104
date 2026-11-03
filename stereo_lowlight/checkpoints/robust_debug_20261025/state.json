@@ -1,0 +1,16 @@
+{
+  "saved": "2026-10-25T00:56:30.9720465+08:00",
+  "archive": "baseline/robust_match_verified_20261025_0051",
+  "control_hex": "00DB",
+  "control_decimal": 219,
+  "left_row_delay": 27,
+  "reverse": true,
+  "flash_written": false,
+  "boot_control": 0,
+  "focal_px": 346,
+  "baseline_mm": 32,
+  "scale": 256,
+  "physical_accuracy_verified": false,
+  "range_calibration": "Deferred by user; 80cm and 120cm were approximate",
+  "restore_script_executed": false
+}

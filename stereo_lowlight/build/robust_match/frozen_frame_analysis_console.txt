@@ -1,0 +1,322 @@
+{
+  "complete": true,
+  "pixels": 5888,
+  "both_reads_identical": true,
+  "patches": [
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "standard_deviation": 36.997,
+      "distinct_peak_gap": 0.12559,
+      "best": [
+        {
+          "ncc": 0.97537,
+          "left_minus_right": [
+            2,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.962949,
+          "left_minus_right": [
+            3,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.961519,
+          "left_minus_right": [
+            1,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.943228,
+          "left_minus_right": [
+            2,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.932319,
+          "left_minus_right": [
+            0,
+            -28
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        184,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 48.847,
+      "distinct_peak_gap": 0.066113,
+      "best": [
+        {
+          "ncc": 0.984248,
+          "left_minus_right": [
+            3,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.981227,
+          "left_minus_right": [
+            2,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.966349,
+          "left_minus_right": [
+            4,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.96251,
+          "left_minus_right": [
+            1,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.950511,
+          "left_minus_right": [
+            3,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        200,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 18.475,
+      "distinct_peak_gap": 0.132517,
+      "best": [
+        {
+          "ncc": 0.982143,
+          "left_minus_right": [
+            1,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.968888,
+          "left_minus_right": [
+            1,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.946029,
+          "left_minus_right": [
+            0,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.944311,
+          "left_minus_right": [
+            1,
+            -29
+          ]
+        },
+        {
+          "ncc": 0.938023,
+          "left_minus_right": [
+            2,
+            -27
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        216,
+        228
+      ],
+      "size": [
+        16,
+        16
+      ],
+      "standard_deviation": 17.059,
+      "distinct_peak_gap": 0.080168,
+      "best": [
+        {
+          "ncc": 0.984636,
+          "left_minus_right": [
+            2,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.975431,
+          "left_minus_right": [
+            2,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.96976,
+          "left_minus_right": [
+            2,
+            -29
+          ]
+        },
+        {
+          "ncc": 0.944536,
+          "left_minus_right": [
+            2,
+            -26
+          ]
+        },
+        {
+          "ncc": 0.931178,
+          "left_minus_right": [
+            2,
+            -30
+          ]
+        }
+      ]
+    },
+    {
+      "right_xy": [
+        192,
+        236
+      ],
+      "size": [
+        24,
+        12
+      ],
+      "standard_deviation": 15.888,
+      "distinct_peak_gap": 0.177937,
+      "best": [
+        {
+          "ncc": 0.980256,
+          "left_minus_right": [
+            1,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.959014,
+          "left_minus_right": [
+            1,
+            -27
+          ]
+        },
+        {
+          "ncc": 0.953856,
+          "left_minus_right": [
+            1,
+            -29
+          ]
+        },
+        {
+          "ncc": 0.943584,
+          "left_minus_right": [
+            0,
+            -28
+          ]
+        },
+        {
+          "ncc": 0.939733,
+          "left_minus_right": [
+            2,
+            -28
+          ]
+        }
+      ]
+    }
+  ],
+  "warning": "One LCD frame, from independently timed camera frame buffers; local ROI translation only, not full rectification or metric calibration.",
+  "offline_census_textured_pixels": 407,
+  "offline_census_max_population": 66,
+  "offline_census_best": [
+    {
+      "dy": -28,
+      "horizontal_sign": 1,
+      "population": 64,
+      "peak": 1,
+      "cluster": 42,
+      "cluster_fraction": 0.6562
+    },
+    {
+      "dy": -29,
+      "horizontal_sign": 1,
+      "population": 64,
+      "peak": 1,
+      "cluster": 29,
+      "cluster_fraction": 0.4531
+    },
+    {
+      "dy": -27,
+      "horizontal_sign": 1,
+      "population": 61,
+      "peak": 1,
+      "cluster": 24,
+      "cluster_fraction": 0.3934
+    },
+    {
+      "dy": -26,
+      "horizontal_sign": -1,
+      "population": 36,
+      "peak": 1,
+      "cluster": 14,
+      "cluster_fraction": 0.3889
+    },
+    {
+      "dy": -25,
+      "horizontal_sign": -1,
+      "population": 43,
+      "peak": 3,
+      "cluster": 15,
+      "cluster_fraction": 0.3488
+    },
+    {
+      "dy": -31,
+      "horizontal_sign": 1,
+      "population": 53,
+      "peak": 1,
+      "cluster": 18,
+      "cluster_fraction": 0.3396
+    },
+    {
+      "dy": -30,
+      "horizontal_sign": 1,
+      "population": 56,
+      "peak": 1,
+      "cluster": 19,
+      "cluster_fraction": 0.3393
+    },
+    {
+      "dy": -36,
+      "horizontal_sign": -1,
+      "population": 48,
+      "peak": 1,
+      "cluster": 16,
+      "cluster_fraction": 0.3333
+    }
+  ],
+  "offline_census_warning": "512-pixel subregion and limited search window; diagnostic only, not hardware ROI acceptance or metric accuracy."
+}

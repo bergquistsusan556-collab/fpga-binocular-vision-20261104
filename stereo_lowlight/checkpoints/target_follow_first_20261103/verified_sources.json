@@ -1,0 +1,32 @@
+{
+  "created": "2026-11-03T18:14:01.749476+08:00",
+  "variant": "target_follow_20261103",
+  "range_coefficients_unchanged": true,
+  "production_rtl_unchanged": 35,
+  "tests": [
+    "tb_marker7",
+    "tb_follow_roi",
+    "tb_follow_pipeline",
+    "tb_pipeline",
+    "tb_video_pipeline",
+    "tb_video_tools",
+    "tb_lcd_system"
+  ],
+  "timing": "WNS=0.994 WHS=0.019",
+  "rtl_sha256": {
+    "depth_roi.v": "8ceb702875a86b2d3449438dca0054c653aa957248d93840aef1731378ea0ab0",
+    "depth_roi_follow.v": "d2821d5c19916752930572913e6c15ca8632a4197dc5b3229a63ecea28dee136",
+    "fusion_pipeline.v": "404de243390cceb7e96d73e740f44304a3cff3a49b021480107451f8cc682819",
+    "marker7_tracker.v": "2854b742b2fd808bc8eef773c6027867340ca7345af723c8d25edbf8414c3b7f",
+    "stereo_census.v": "4c50f1bd73ec91f4da5371bfd95f1eaf1f2f90623a8c2a4590f0a37c1a3c6f3e",
+    "top_dual_ov5640_lcd.v": "d8eff74c19c451d7abf446b0f3540a62e34e69019635019d69d18ded4095b499",
+    "video_tools.v": "dad5cf797523c1c95bea77939de7ae28c19070b4239e3f1c1b4db75ce96b63a1"
+  },
+  "artifact_sha256": {
+    "fusion.bit": "8def5ddf97e123431b73b455e92d76d34ba347f1893c48d0e27f7411eb9e7d61",
+    "fusion.ltx": "02ecdf9e2d9176715a7a6002b819605b97a9be8104ac13fe5c1ec8cf7bc186f4",
+    "synthesized.dcp": "deb9a41192aa6c413d8802ebecc9664e114b848e7e4d77b718415758a506e64d"
+  },
+  "physical_following_verified": false,
+  "dynamic_distance_accuracy_verified": false
+}

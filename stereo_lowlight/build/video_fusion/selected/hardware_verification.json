@@ -1,0 +1,272 @@
+{
+  "created": "2026-11-03T16:40:44.495771",
+  "passed": true,
+  "checks": [
+    {
+      "name": "at_least_3_captures",
+      "passed": true,
+      "details": 5
+    },
+    {
+      "name": "0:device_identity",
+      "passed": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "0:initialization",
+      "passed": true,
+      "details": 15
+    },
+    {
+      "name": "0:two_camera_pixel_counts",
+      "passed": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "0:camera_clocks",
+      "passed": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "0:auto_exposure",
+      "passed": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "1:device_identity",
+      "passed": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "1:initialization",
+      "passed": true,
+      "details": 15
+    },
+    {
+      "name": "1:two_camera_pixel_counts",
+      "passed": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "1:camera_clocks",
+      "passed": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "1:auto_exposure",
+      "passed": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "2:device_identity",
+      "passed": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "2:initialization",
+      "passed": true,
+      "details": 15
+    },
+    {
+      "name": "2:two_camera_pixel_counts",
+      "passed": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "2:camera_clocks",
+      "passed": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "2:auto_exposure",
+      "passed": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "3:device_identity",
+      "passed": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "3:initialization",
+      "passed": true,
+      "details": 15
+    },
+    {
+      "name": "3:two_camera_pixel_counts",
+      "passed": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "3:camera_clocks",
+      "passed": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "3:auto_exposure",
+      "passed": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "4:device_identity",
+      "passed": true,
+      "details": [
+        22080,
+        22080,
+        17284
+      ]
+    },
+    {
+      "name": "4:initialization",
+      "passed": true,
+      "details": 15
+    },
+    {
+      "name": "4:two_camera_pixel_counts",
+      "passed": true,
+      "details": [
+        192000,
+        192000
+      ]
+    },
+    {
+      "name": "4:camera_clocks",
+      "passed": true,
+      "details": [
+        47.996,
+        47.996
+      ]
+    },
+    {
+      "name": "4:auto_exposure",
+      "passed": true,
+      "details": [
+        0,
+        0,
+        88,
+        88
+      ]
+    },
+    {
+      "name": "camera1:frames_advance",
+      "passed": true,
+      "details": [
+        5,
+        21,
+        37,
+        52,
+        67
+      ]
+    },
+    {
+      "name": "camera1:pixel_data_changes",
+      "passed": true,
+      "details": [
+        61984,
+        26064,
+        12993,
+        65351,
+        57024
+      ]
+    },
+    {
+      "name": "camera2:frames_advance",
+      "passed": true,
+      "details": [
+        5,
+        21,
+        37,
+        52,
+        67
+      ]
+    },
+    {
+      "name": "camera2:pixel_data_changes",
+      "passed": true,
+      "details": [
+        7974,
+        16300,
+        53818,
+        56471,
+        40018
+      ]
+    },
+    {
+      "name": "ddr_read_stream_changes",
+      "passed": true,
+      "details": [
+        64472,
+        37124,
+        38218,
+        8404,
+        15768
+      ]
+    }
+  ],
+  "physical_accuracy_verified": false,
+  "new_modes_visually_verified": false,
+  "limitations": [
+    "Compact probe does not measure output DE count or enhanced image brightness.",
+    "Algorithm correctness/latency tested in simulation; screen appearance still requires visual observation."
+  ]
+}

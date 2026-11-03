@@ -1,0 +1,316 @@
+{
+  "warning": "Static-scene diagnostic assembled across multiple camera frames; not synchronized stereo or range evidence.",
+  "duplicate_pixel_disagreements": 1968,
+  "eyes": {
+    "left": {
+      "gray_min": 4,
+      "gray_max": 255,
+      "gray_mean": 119.53033333333333,
+      "fraction_below_128": 0.5186875,
+      "markers": [],
+      "mirrored_ids": []
+    },
+    "right": {
+      "gray_min": 2,
+      "gray_max": 255,
+      "gray_mean": 125.06385416666667,
+      "fraction_below_128": 0.48510416666666667,
+      "markers": [],
+      "mirrored_ids": []
+    }
+  },
+  "phasewise_right_detections": [
+    {
+      "phase": 0,
+      "ids": [],
+      "corners_in_6x_preview": []
+    },
+    {
+      "phase": 2,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            102.0,
+            78.0
+          ],
+          [
+            167.0,
+            84.0
+          ],
+          [
+            161.0,
+            209.0
+          ],
+          [
+            102.0,
+            197.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 4,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            102.0,
+            78.0
+          ],
+          [
+            161.0,
+            90.0
+          ],
+          [
+            155.0,
+            209.0
+          ],
+          [
+            96.0,
+            197.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 6,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            102.0,
+            78.0
+          ],
+          [
+            161.0,
+            84.0
+          ],
+          [
+            155.0,
+            209.0
+          ],
+          [
+            96.0,
+            197.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 16,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            102.0,
+            78.0
+          ],
+          [
+            167.0,
+            84.0
+          ],
+          [
+            161.0,
+            203.0
+          ],
+          [
+            102.0,
+            197.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 18,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            102.0,
+            78.0
+          ],
+          [
+            161.0,
+            84.0
+          ],
+          [
+            161.0,
+            203.0
+          ],
+          [
+            102.0,
+            197.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 20,
+      "ids": [],
+      "corners_in_6x_preview": []
+    },
+    {
+      "phase": 22,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            78.0,
+            54.0
+          ],
+          [
+            143.0,
+            54.0
+          ],
+          [
+            137.0,
+            179.0
+          ],
+          [
+            72.0,
+            179.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 32,
+      "ids": [],
+      "corners_in_6x_preview": []
+    },
+    {
+      "phase": 34,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            84.0,
+            72.0
+          ],
+          [
+            143.0,
+            72.0
+          ],
+          [
+            149.0,
+            185.0
+          ],
+          [
+            84.0,
+            185.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 36,
+      "ids": [],
+      "corners_in_6x_preview": []
+    },
+    {
+      "phase": 38,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            84.0,
+            60.0
+          ],
+          [
+            143.0,
+            60.0
+          ],
+          [
+            143.0,
+            185.0
+          ],
+          [
+            84.0,
+            185.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 48,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            90.0,
+            60.0
+          ],
+          [
+            149.0,
+            60.0
+          ],
+          [
+            155.0,
+            179.0
+          ],
+          [
+            90.0,
+            185.0
+          ]
+        ]
+      ]
+    },
+    {
+      "phase": 50,
+      "ids": [],
+      "corners_in_6x_preview": []
+    },
+    {
+      "phase": 52,
+      "ids": [],
+      "corners_in_6x_preview": []
+    },
+    {
+      "phase": 54,
+      "ids": [
+        7
+      ],
+      "corners_in_6x_preview": [
+        [
+          [
+            96.0,
+            72.0
+          ],
+          [
+            155.0,
+            66.0
+          ],
+          [
+            155.0,
+            179.0
+          ],
+          [
+            96.0,
+            185.0
+          ]
+        ]
+      ]
+    }
+  ],
+  "phasewise_right_id7_count": 10,
+  "phasewise_scope": "Separate sampling phases; not FPGA detector results or coherent synchronized stereo frames."
+}

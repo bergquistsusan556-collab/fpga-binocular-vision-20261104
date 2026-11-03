@@ -1,0 +1,5 @@
+build=target_follow_20261103
+host_time=2026-11-03T18:14:39+0800
+vio_control=00db
+probe_layout=tracking256; depth=1024
+programmed_now=1; jtag_ram_only=1
